@@ -1,0 +1,24 @@
+Métodos
+/**************************************************************************************/
+MoveToEx: actualiza la posicion actual para el punto especificado 
+y opcionalmente regresa la posicion anterior
+
+BOOL MoveToEx(  HDC hdc,          // handle to device context
+  int X,            // coordenada x de la nueva posicion
+  int Y,            // coordenada y de la nueva posicion
+  LPPOINT lpPoint   // apuntador a la posicion anterior
+);
+/***************************************************************************************/
+LineTo: dibuja una linea de la posicion actual hacia el punto especificado, 
+pero no incluid
+
+BOOL LineTo(
+  HDC hdc,    // device context handle
+  int nXEnd,  // x final
+  int nYEnd   // y final
+);
+/**************************************************************************************/
+Handles:
+Mensajes: 
+Tipos:
+Estructuras: COLORREF: valor de 32 bits que especifica un color en RGB

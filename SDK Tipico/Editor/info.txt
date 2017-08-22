@@ -1,0 +1,8 @@
+Metodos:
+Sleep: suspende la ejecucion del hilo actual por 
+un intervalo especificado
+
+VOID Sleep(
+  DWORD dwMilliseconds   // tiempo en milisegundos
+);
+

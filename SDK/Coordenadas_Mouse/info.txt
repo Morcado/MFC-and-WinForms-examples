@@ -1,0 +1,27 @@
+Métodos
+/****************************************************************************************
+****************************************************************************************
+SetTextColor: establece el color indicado
+
+COLORREF SetTextColor(
+  HDC hdc,           // handle to device context
+  COLORREF crColor   // text color
+);
+****************************************************************************************
+Handles:
+
+Mensajes
+/**************************************************************************************
+***************************************************************************************/
+WM_LBUTTONDOWN: Mensaje cuando se presiona el boton izquierdo
+fwKeys = wParam;        // indica si hay varias teclas virtuales presionadas
+                        //MK_LBUTTON si se presiona el boton izquierdo 
+                        //MK_RBUTTON si se presiona el boton derecho  
+xPos = LOWORD(lParam);  // posicion horizontal, se obtiene de LOWORD
+yPos = HIWORD(lParam);  // posicion vertical, se obtiene de HIWORD
+/***************************************************************************************/
+LOWORD, HIWORD: palabras de 32 bits 
+/***************************************************************************************/
+WM_RBUTTONDOWN: mensaje cuando se presiona cuando
+
+Estructuras:

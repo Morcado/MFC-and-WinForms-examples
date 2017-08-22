@@ -1,0 +1,25 @@
+//editor.rc
+#include "Editor_nuevo.h"
+
+Menu MENU
+{
+    POPUP "&File"
+    {
+        MENUITEM "&Save", IDM_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "&Open",  IDM_OPEN
+    }
+    POPUP "&Shapes"
+    {
+        MENUITEM "&Rectangle", IDM_RECTANGLE
+        MENUITEM SEPARATOR
+        MENUITEM "&Ellipse", IDM_ELLIPSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Round Rect", IDM_ROUNDRECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Line", IDM_LINE
+        MENUITEM SEPARATOR
+        MENUITEM "&Free Hand", IDM_FREEHAND
+    }
+    MENUITEM "&Dessert", 205
+} 

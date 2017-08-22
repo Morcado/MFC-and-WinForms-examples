@@ -1,0 +1,20 @@
+Métodos
+/*************************************************************************************
+**************************************************************************************/ MessageBox: crea, muestra y opera una caja de mensaje, contiene un mensaje y un titulo
+y una combinacion de botones predefinidos y botones
+
+int MessageBox(
+  HWND hWnd,          // handle de la ventana dueña
+  LPCTSTR lpText,     // texto en el message box
+  LPCTSTR lpCaption,  // titulo de la caja de mensaje
+  UINT uType          // estilo de la caja de mensaje
+);
+
+uType:
+MB_OK                 //contiene un boton OK
+MB_YESNO              //contiene dos botones SI y NO
+/*************************************************************************************/
+Handles:
+Mensajes:
+Tipos:
+Estructuras:

@@ -1,0 +1,211 @@
+Metodos
+/************************************************************************
+*************************************************************************/
+WinMain: Función llamada por el sistema como el punto de entrada de
+una aplicacion basada en Win32:
+
+int WINAPI WinMain(
+  HINSTANCE hInstance,  // handle a la instancia actual
+  HINSTANCE hPrevInstance,  // handle a la instancia anterior
+  LPSTR lpCmdLine,      // puntero a la linea de comando
+  int nCmdShow          // muestra el estado de la ventana
+);
+/************************************************************************/
+LoadCursor: carga el recurso del cursor especificado del .exe 
+asociado con una instancia de aplicación:
+
+HCURSOR LoadCursor(
+  HINSTANCE hInstance,  // handle para la insancia de la aplicacion
+  LPCTSTR lpCursorName  // cadena o cursor identificador de	 recurso
+);
+/************************************************************************/
+GetStockObject: recupera un handle para uno de los pinceles,
+lapices predeterminados:
+
+HGDIOBJ GetStockObject(
+  int fnObject   // tipo de objeto stock
+);
+/************************************************************************/
+CreateWindow: crea una ventana sobrepuesta, especifica 
+la clase de la ventana, el tamaño, el titulo y la posicion:
+
+HWND CreateWindow(
+  LPCTSTR lpClassName,  // apuntador al nombre registrado de la clase
+  LPCTSTR lpWindowName, // apuntador al nombre de la ventana
+  DWORD dwStyle,        // estilo de la ventana
+  int x,                // posicion horizontal
+  int y,                // posicion vertical
+  int nWidth,           // ancho
+  int nHeight,          // alto
+  HWND hWndParent,      // handle para padre o ventana dueña
+  HMENU hMenu,          // handle para menu o identificador de ventana hija
+  HANDLE hInstance,     // handle para la instancia de la aplicación
+  LPVOID lpParam        // apuntador a los datos de la creacion de ventana
+);
+/************************************************************************/
+ShowWindow: cambia el estado de muestra de una ventana
+
+BOOL ShowWindow(
+  HWND hWnd,     // handle para la ventana
+  int nCmdShow   // muestra el estado de la ventana
+);
+/************************************************************************/
+UpdateWindow: actualiza el area del cliente mandando un mensaje WM_PAINT
+
+BOOL UpdateWindow(
+  HWND hWnd   // handle para la ventana
+);
+/************************************************************************/
+GetMessage: recupera un mensaje de la llamada de las colas de los mensajes
+y lo ubica en la estructura especificada
+BOOL GetMessage(
+  LPMSG lpMsg,         // direccion de la estructura con mensaje
+  HWND hWnd,           // handle para la ventana
+  UINT wMsgFilterMin,  // primer mensaje
+  UINT wMsgFilterMax   // ultimo mensaje
+);
+/************************************************************************/
+TranslateMessage: traduce mensajes virtuales en mensajes de caracteres
+
+BOOL TranslateMessage(
+  CONST MSG *lpMsg   // direccion de la estructura con mensaje
+);
+/************************************************************************/
+DispatchMessage: entrega un mensaje a un procedimiento de ventana:
+
+LONG DispatchMessage(
+  CONST MSG *lpmsg   // apuntador de la estructura con mensaje
+);
+/************************************************************************/
+PostQuitMessage: indica al sistema que un thread ha pedido terminar, 
+se usa en respuesta de un mensaje WM_DESTROY
+
+VOID PostQuitMessage(
+  int nExitCode   // codigo de salida
+);
+/************************************************************************/
+DefWindowProc: llama el procedimiento de la ventana por defecto para 
+proveer el procesamiento por defecto para cualquier mensaje de ventana 
+que una aplicacion no procesa.
+
+LRESULT DefWindowProc(
+  HWND hWnd,      // handle to window
+  UINT Msg,       // message identifier
+  WPARAM wParam,  // first message parameter
+  LPARAM lParam   // second message parameter
+);
+/************************************************************************/
+SetTextColor: establece un color al texto para un contexto especifico
+
+COLORREF SetTextColor(
+  HDC hdc,           // handle para el contexto 
+  COLORREF crColor   // color
+);
+/************************************************************************/
+TextOut: escribe una cadena a una posicion especificada:
+
+BOOL TextOut(
+  HDC hdc,           // handle para contexto
+  int nXStart,       // x
+  int nYStart,       // y
+  LPCTSTR lpString,  // apuntador a cadena
+  int cbString       // numeros de caracteres de la cadena
+);
+/************************************************************************/
+RegisterClass: registra la clase de una ventana para las llamadas de 
+CreateWindow
+
+ATOM RegisterClass(
+  CONST WNDCLASS *lpWndClass   // direccion de la estructura con la clase
+                               // datos
+);
+/************************************************************************/
+BeginPaint: prepara la ventana especificada para pintar y llena
+PAINSTRUCT con esa informacion
+
+HDC BeginPaint(  HWND hwnd,  // handle para ventana  LPPAINTSTRUCT lpPaint
+              // apuntador a la estructura para la informacion de pintar); 
+/************************************************************************/
+EndPaint: marca el fin de la pintada de una ventana, se requiere
+
+BOOL EndPaint(  HWND hWnd,  // handle para ventana 
+				 CONST PAINTSTRUCT *lpPaint 
+              // apuntador a la estructura con datos de pintura); 
+/*************************************************************************
+*************************************************************************/
+Mensajes:
+/*************************************************************************
+*************************************************************************/
+
+/************************************************************************/
+Handles: 
+hInst		//instancia
+hPreInst	//intancia anterior
+hIcon		//icono
+hWnd		//ventana
+hCursor		//cursor
+HDC: handle a un contexto de equipo
+
+Tipos:
+char
+int
+
+LRESULT		//resultado signado de procesamiento de mensajes
+CALLBACK	//convencion de llamada para funciones callback
+HINSTANCE	//instancia
+LPSTR		//apuntador de 32 bits a un string
+LPARAM		//valor de 32 bits pasado como un parametro
+WPARAM		//valor de 32 bits pasado como un parametro
+UINT		//entero de 16 bits sin signo
+
+/*************************************************************************
+*************************************************************************/
+Estructuras:
+/*************************************************************************
+*************************************************************************/
+PAINTSTRUCT: informacion para pintar el area del cliente
+
+typedef struct tagPAINTSTRUCT { // ps 
+    HDC  hdc;		//handle
+    BOOL fErase;	//borra o no
+    RECT rcPaint;	//rectangulo
+    BOOL fRestore; 
+    BOOL fIncUpdate; 
+    BYTE rgbReserved[32]; 
+} PAINTSTRUCT; 
+/************************************************************************/
+WNDCLASS: contiene los atributos de la clase de la ventana que 
+son registrados por la funcion RegisterClass
+
+typedef struct _WNDCLASS { 
+    UINT    style; 
+    WNDPROC lpfnWndProc; 
+    int     cbClsExtra; 
+    int     cbWndExtra; 
+    HANDLE  hInstance; 
+    HICON   hIcon; 
+    HCURSOR hCursor; 
+    HBRUSH  hbrBackground; 
+    LPCTSTR lpszMenuName; 
+    LPCTSTR lpszClassName; 
+} WNDCLASS; 
+/************************************************************************/
+RECT: define las coordenadas de un rectangulo
+
+typedef struct _RECT { 
+    LONG left; 
+    LONG top; 
+    LONG right; 
+    LONG bottom; 
+} RECT; 
+/************************************************************************/
+MSG: contiene la informacion de un mensaje de una lista de mensajes
+
+typedef struct tagMSG {     // msg 
+    HWND   hwnd;     
+    UINT   message; 
+    WPARAM wParam; 
+    LPARAM lParam; 
+    DWORD  time; 
+    POINT  pt; 
+} MSG; 

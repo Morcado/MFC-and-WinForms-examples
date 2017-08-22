@@ -1,0 +1,46 @@
+Metodos
+/**************************************************************************************
+************************************************************************************/
+Rectangle: dibuja un rectangulo usando la pluma actual y el brush actual
+
+BOOL Rectangle( 
+  HDC hdc,         // handle to device context
+  int nLeftRect,   // coordenada x superior izquierda
+  int nTopRect,    // coordenada y superior izquierda
+  int nRightRect,  // coordenada x inferior derecha
+  int nBottomRect  // coordenada y inferior derecha
+); 
+/*************************************************************************************
+Ellipse:
+RoundRect: dibuja un rectangulo con esquinas redondeadas, utiliza la pluma y el brush
+actuales
+
+BOOL RoundRect(
+  HDC hdc,         // handle to device context
+  int nLeftRect,   // coordenada x superior izquierda
+  int nTopRect,    // coordenada y superior izquierda
+  int nRightRect,  // coordenada x inferior derecha
+  int nBottomRect, // coordenada y inferior derecha
+  int nWidth,      // ancho del ellipse usado para las esquinas
+  int nHeight      // altura del ellipse usado para las esquinas
+);
+/**************************************************************************************/
+DialogBox: crea un cuadro de dialogo modal de un recurso de cuadro de dialogo. Regresa
+control hasta que se llama la funcion EndDialog.
+
+the modal dialog box by calling the EndDialog function. The DialogBox macro uses the DialogBoxParam function.
+
+int DialogBox(
+  HINSTANCE hInstance,  // handle para la instancia
+  LPCTSTR lpTemplate,   // string para la plantilla para el dialog box
+  HWND hWndParent,      // handle para la ventana dueña
+  DLGPROC lpDialogFunc  // apuntador al procedimiento del dialog box
+);
+/**************************************************************************************/
+Handles 
+/*************************************************************************************
+**************************************************************************************/
+HACCEL: handle para la tabla de aceleradores
+Mensajes:
+Tipos:
+Estructuras:
