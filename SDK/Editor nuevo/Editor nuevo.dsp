@@ -94,10 +94,6 @@ SOURCE=.\Editor_nuevo.c
 # End Source File
 # Begin Source File
 
-SOURCE=.\Editor_nuevo.c
-# End Source File
-# Begin Source File
-
 SOURCE=.\Editor_nuevo.rc
 # End Source File
 # End Group

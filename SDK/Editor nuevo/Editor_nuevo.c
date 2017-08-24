@@ -1,5 +1,5 @@
 /*
-Nombre: Oscar Armaando González Patiño
+Nombre: Oscar Armando González Patiño
 Fecha: 22 de agosto de 2017
 Proyecto: Editor
 Funcionalidad: Editor de figuras
@@ -16,11 +16,14 @@ Estructuras:
 HINSTANCE hInstance;
 char szProgName[] = "Programa";
 char szProgMenu[] = "Menu";
+BOOL band=TRUE;    
+int i=0;
 
 LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
 int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPreInst, LPSTR lpszCmdLine, int nCmdShow){
     HWND hWnd;
+    HACCEL hAccel;
     MSG lpMsg;
     WNDCLASS wcApp;
 
@@ -45,7 +48,9 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPreInst, LPSTR lpszCmdLine, int n
                         CW_USEDEFAULT, (HWND)NULL, (HMENU)NULL, (HANDLE)hInst, (LPSTR)NULL);
     ShowWindow(hWnd, nCmdShow);
     UpdateWindow(hWnd);
+    hAccel = LoadAccelerators(hInst, "MiAccel");
     while(GetMessage(&lpMsg, 0, 0, 0)){
+        if(!TranslateAccelerator(hWnd, hAccel, &lpMsg));
         TranslateMessage(&lpMsg);
         DispatchMessage(&lpMsg);
     }
@@ -57,7 +62,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT messg, WPARAM wParam, LPARAM lParam){
     HDC hdc;
     PAINTSTRUCT ps;
     RECT rt;
-    int wID, i;
+    int wID;
 
     GetClientRect(hWnd, &rt);
 
@@ -66,26 +71,47 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT messg, WPARAM wParam, LPARAM lParam){
             wID = LOWORD(wParam);
             switch(wID){
                 case IDM_RECTANGLE:
-                    i = 0;
+                    i = 1;
                     break; 
                 case IDM_ELLIPSE:
-                    i = 1;
-                    break;
-                case IDM_ROUNDRECT:
                     i = 2;
                     break;
-                case IDM_LINE:
+                case IDM_ROUNDRECT:
                     i = 3;
                     break;
-                case IDM_FREEHAND:
+                case IDM_LINE:
                     i = 4;
                     break;
+                case IDM_FREEHAND:
+                    i = 5;
+                    break;
             }
+            //band = TRUE;
+            InvalidateRect(hWnd, &rt, FALSE);
             break;
         case WM_PAINT:
-            hdc = BeginPaint(hWnd, &ps);
-
-            EndPaint(hWnd, &ps);
+            if(band){
+                hdc = BeginPaint(hWnd, &ps);
+                switch(i){
+                    case 1:
+                        Rectangle(hdc, 100, 100, 200, 200);
+                        break;
+                    case 2:
+                        Ellipse(hdc, 100, 100, 200, 200);
+                        break;
+                    case 3:
+                        RoundRect(hdc, 100, 100, 200, 200, 30, 30);
+                        break;
+                    case 4:
+                        MoveToEx(hdc, 100, 100, NULL);
+                        LineTo(hdc, 200, 200);
+                        break;
+                    case 5:
+                        //construccion
+                        break;
+                }
+                EndPaint(hWnd, &ps);
+            }
             break;
         case WM_DESTROY:
             PostQuitMessage(0);
