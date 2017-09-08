@@ -1,0 +1,13 @@
+Metodos
+SetTimer:crea un timer con el tiempo especificado
+
+UINT SetTimer(
+  HWND hWnd,              // handle de la ventana
+  UINT nIDEvent,          // identificador del timer
+  UINT uElapse,           // valor de tiempo
+  TIMERPROC lpTimerFunc   // direccion del procedimiento
+);
+
+Mensajes:
+WM_TIMER: se publica en la cola cuando el timer expira. si no se pone null se llama
+a TimerProc

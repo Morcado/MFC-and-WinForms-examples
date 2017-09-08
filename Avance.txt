@@ -1,0 +1,30 @@
+﻿Alumno: Oscar Armando González Patiño
+Fecha: 28 de agosto de 2017
+
+Se entregan 4 programas de SDK Y 4 de SDK tipico con ayudas
+Los programas de SDK son:
+1. Cascaron: programa que muestra el hola mundo
+2. Coordenadas Mouse: programa que muestra las coordenadas del mouse cuando se da click
+3. Editor: programa que muestra unn cuadrado,  uun circulo, un rectangulo redondeado y una linea a  partir de los menus
+4. Mensajes mouse: programa que muestra cajas de texto cuando se da click derecho o click izquierdo
+
+Los programas de SDK tipico son
+1. Cascaron tipico: muestra hola mundo
+1. Editor figuras: programa que pinta un cuadrado, circulo, cuadrado redondeado y linea
+2. Mensajes Mouse tipico: muestra cajas de texto cuando se da click con el raton
+3. Coordenadas tipico: muestra las coordenadas del mouse cuando se da click
+4. 
+
+Rev.
+    Mensajes Mouse tipico: Agregar la bandera
+
+
+------------------------------------------------------------------------
+Fecha: 31 de agosto de 2017
+
+Se agrego la bandera a mouse tipico
+Se entrega editor de imagenes
+
+
+Rev.
+	OK
