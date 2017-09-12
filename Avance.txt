@@ -28,3 +28,10 @@ Se entrega editor de imagenes
 
 Rev.
 	OK
+------------------------------------------------------------------------
+Fecha: 11 de septiembre de 2017
+
+Se entrega proyecto de Diálogo_Controles				OK
+Se entrega proyecto de botones_Tipico					OK
+Se entrega proyecto de Tempo_Tipico 	OK		le falta caminar
+Se entrega proyecto de Pelota_tipico					OK
