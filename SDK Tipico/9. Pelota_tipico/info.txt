@@ -1,0 +1,14 @@
+Metodos:
+KillTimer: destruye el timer especificado
+
+BOOL KillTimer(
+  HWND hWnd,      // handle de la ventana que tiene el timer
+  UINT uIDEvent   // identificador del timer
+);
+
+SetTimer: crea un timer con el valor especificado
+
+UINT SetTimer(  HWND hWnd,  //handl de la ventana para los mensajes
+  UINT nIDEvent,          // identificador del timer
+  UINT uElapse,           // valor final del tiempo
+  TIMERPROC lpTimerFunc   // direccion del procedimiento del timer :v 

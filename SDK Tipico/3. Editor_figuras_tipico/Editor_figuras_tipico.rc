@@ -1,0 +1,219 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "resource.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Mexican) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESM)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MEXICAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Spanish (Mexican) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Modern) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EDITOR_FIGURAS_TIPICO ICON    DISCARDABLE     "Editor_figuras_tipico.ICO"
+IDI_SMALL               ICON    DISCARDABLE     "SMALL.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_EDITOR_FIGURAS_TIPICO MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Shapes"
+    BEGIN
+        MENUITEM "&Rectangle",                  IDM_RECTANGLE
+        MENUITEM "&Ellipse",                    IDM_ELLIPSE
+        MENUITEM "Ro&undRect",                  IDM_ROUNDRECT
+        MENUITEM "&Line",                       IDM_LINE
+        MENUITEM "Free Hand",                   IDM_FREEHAND
+    END
+    POPUP "Pen &Width"
+    BEGIN
+        MENUITEM "&1",                          IDM_P1
+        MENUITEM "&2",                          IDM_P2
+        MENUITEM "&3",                          IDM_P3
+        MENUITEM "&4",                          IDM_P4
+        MENUITEM "&5",                          IDM_P5
+    END
+    POPUP "Pen &Color"
+    BEGIN
+        MENUITEM "Red",                         IDM_RED_P
+        MENUITEM "Green",                       IDM_GREEN_P
+        MENUITEM "Blue",                        IDM_BLUE_P
+        MENUITEM "Black",                       IDM_BLACK_P
+    END
+    POPUP "Pen &Style"
+    BEGIN
+        MENUITEM "Solid",                       IDM_PS_SOLID
+        MENUITEM "Dash",                        IDM_PEN_DASH
+        MENUITEM "Dot",                         IDM_PS_DOT
+        MENUITEM "Dashdot",                     IDM_PS_DASHDOT
+        MENUITEM "Dashdotdot",                  IDM_PS_DASHDOTDOT
+        MENUITEM "Null",                        IDM_PS_NULL
+    END
+    POPUP "&Brush Style"
+    BEGIN
+        MENUITEM "Vertical",                    IDM_HS_BDIAGONAL
+        MENUITEM "Diagonal",                    IDM_HS_CROSS
+        MENUITEM "Diagonal invertido",          IDM_HS_DIAGCROSS
+        MENUITEM "Cruz",                        IDM_HS_FDIAGONAL
+        MENUITEM "Diagonal Cruz",               IDM_HS_HORIZONTAL
+        MENUITEM "Horizontal",                  IDM_HS_VERTICAL
+        MENUITEM "Solido",                      IDM_SOLID
+    END
+    POPUP "B&rush color"
+    BEGIN
+        MENUITEM "&Red",                        IDM_RED_B
+        MENUITEM "&Green",                      IDM_GREEN_B
+        MENUITEM "&Blue",                       IDM_BLUE_B
+        MENUITEM "B&lack",                      IDM_BLACK_B
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_EDITOR_FIGURAS_TIPICO ACCELERATORS MOVEABLE PURE 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  22, 17, 230, 75
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System"
+BEGIN
+    ICON            IDI_EDITOR_FIGURAS_TIPICO,IDC_MYICON,14,9,16,16
+    LTEXT           "Editor_figuras_tipico Version 1.0",IDC_STATIC,49,10,119,
+                    8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,49,20,119,8
+    DEFPUSHBUTTON   "OK",IDOK,195,6,30,11,WS_GROUP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""resource.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_APP_TITLE           "Editor_figuras_tipico"
+    IDS_HELLO               "Hello World!"
+    IDC_EDITOR_FIGURAS_TIPICO "EDITOR_FIGURAS_TIPICO"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_RECTANGLE           "Dibuja un rectángulo"
+    ID_SHAPES_ELLIPSE       "Dibuja un ellipse / Draws a ellipse"
+    IDM_ROUNDRECT           "Dibuja un rectangulo redondeado"
+    IDM_ELLIPSE             "Dibuja un elipse"
+    IDM_LINE                "Dibuja una línea"
+END
+
+#endif    // Spanish (Modern) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
