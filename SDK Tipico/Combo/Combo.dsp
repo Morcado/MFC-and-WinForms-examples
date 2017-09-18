@@ -94,14 +94,6 @@ SOURCE=.\Combo.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\Combo.cpp
-# End Source File
-# Begin Source File
-
-SOURCE=.\Combo.cpp
-# End Source File
-# Begin Source File
-
 SOURCE=.\Combo.rc
 # End Source File
 # Begin Source File

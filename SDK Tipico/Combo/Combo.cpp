@@ -17,7 +17,8 @@ HINSTANCE hInst;                                // current instance
 TCHAR szTitle[MAX_LOADSTRING];                              // The title bar text
 TCHAR szWindowClass[MAX_LOADSTRING];                                // The title bar text
 
-NP *lista, *nodo, *corre, *corre2;
+NP *lista, *nodo, *corre;
+NR *corre2, *nr;
 int x = 100, y = 100;
 
 // Foward declarations of functions included in this code module:
@@ -28,10 +29,12 @@ LRESULT CALLBACK About(HWND, UINT, WPARAM, LPARAM);
 LRESULT CALLBACK Combo(HWND, UINT, WPARAM, LPARAM);
 NP *creaNodoNP(int n);
 NR *creaNodoNR(int n);
+BOOL Busca_Dec(int d);
 
 void iniciaLista();
 void creaLista(NP *n);
 void inserta_OrdenadoNP(NP *np);
+void inserta_OrdenadoNR(NP *np, NR *nr);
 void imprimeLista(HDC hdc);
 //void Inserta_OrdenadoNR(NP *np, NR *nr);
 
@@ -116,14 +119,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
 
     RECT rt;
     static char cad[10];
-    int numeros, i, n;
+    int numeros, i, n, d;
     static BOOL band;
 
     GetClientRect(hWnd, &rt);
 
     switch (message){
         case WM_COMMAND:
-            wmId    = LOWORD(wParam); 
+            wmId    = LOWORD(wParam);
             wmEvent = HIWORD(wParam); 
             // Parse the menu selections:
             switch (wmId)
@@ -137,8 +140,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                     numeros = rand()%15 + 15;
                         for(i = 0; i < numeros; i ++){
                             n = rand()%100;
-                            nodo = creaNodoNP(n);
-                            inserta_OrdenadoNP(nodo);
+                            d = n/10*10;
+                            if(Busca_Dec == FALSE){
+                                nodo = creaNodoNP(d);
+                                inserta_OrdenadoNP(nodo);
+                                nr = creaNodoNR(n);
+                                inserta_OrdenadoNR(nodo, nr);
+                            }
+                            //nodo = creaNodoNP(d);
+                            //inserta_OrdenadoNP(nodo);
                             //creaLista(nodo);
                             //insertaFinal(nodo);   
                            }
@@ -187,8 +197,7 @@ LRESULT CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
 
     switch (message){
         case WM_INITDIALOG:
-            return TRUE;
-            break;
+                return TRUE;
 
         case WM_COMMAND:
             if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL) {

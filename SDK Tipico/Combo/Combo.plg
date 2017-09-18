@@ -6,15 +6,14 @@
 --------------------Configuration: Combo - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPC5BA.tmp" with contents
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP1E60.tmp" with contents
 [
 /nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Combo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
 "C:\Users\Oscar Patiño\Desktop\Visual 2017\SDK Tipico\Combo\Combo.cpp"
 ]
-Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPC5BA.tmp" 
+Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP1E60.tmp" 
 <h3>Output Window</h3>
 Compiling...
-Skipping... (no relevant changes detected)
 Combo.cpp
 
 
