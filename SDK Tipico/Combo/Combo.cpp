@@ -1,7 +1,5 @@
-/*
-    Nombre: Oscar Armando González Patiño
-    Fecha: 14 de septiembre de 2017
-*/
+/*  Nombre: Oscar Armando González Patiño
+    Fecha: 14 de septiembre de 2017   */
 
 #include "stdafx.h"
 #include "resource.h"
@@ -17,9 +15,11 @@ HINSTANCE hInst;                                // current instance
 TCHAR szTitle[MAX_LOADSTRING];                              // The title bar text
 TCHAR szWindowClass[MAX_LOADSTRING];                                // The title bar text
 
-NP *lista, *nodo, *corre;
-NR *corre2, *nr;
+NP *lista;
+
 int x = 100, y = 100;
+BOOL band, dband = FALSE;
+char cad[10];
 
 // Foward declarations of functions included in this code module:
 ATOM MyRegisterClass(HINSTANCE hInstance);
@@ -34,7 +34,7 @@ BOOL Busca_Dec(int d);
 void iniciaLista();
 void creaLista(NP *n);
 void inserta_OrdenadoNP(NP *np);
-void inserta_OrdenadoNR(NP *np, NR *nr);
+BOOL inserta_OrdenadoNR(NP *np, NR *nr);
 void imprimeLista(HDC hdc);
 //void Inserta_OrdenadoNR(NP *np, NR *nr);
 
@@ -117,14 +117,17 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
     TCHAR szHello[MAX_LOADSTRING];
     LoadString(hInst, IDS_HELLO, szHello, MAX_LOADSTRING);
 
-    RECT rt;
-    static char cad[10];
-    int numeros, i, n, d;
-    static BOOL band;
+    RECT rt, rtMarco;
 
+    int numeros, i, n, d;
+    NR *nr;
+    NP *corre, *nodo;
     GetClientRect(hWnd, &rt);
 
     switch (message){
+        case WM_CREATE:
+            GetWindowRect(hWnd, &rtMarco);
+            break;
         case WM_COMMAND:
             wmId    = LOWORD(wParam);
             wmEvent = HIWORD(wParam); 
@@ -137,13 +140,21 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                 case IDM_LL:
                     srand((unsigned)time(NULL));
                     iniciaLista();
-                    numeros = rand()%15 + 15;
+                    numeros = rand()%35 + rand()%5 + rand()%5;
                         for(i = 0; i < numeros; i ++){
                             n = rand()%100;
                             d = n/10*10;
-                            if(Busca_Dec == FALSE){
+                            if(Busca_Dec(d) == FALSE){
                                 nodo = creaNodoNP(d);
-                                inserta_OrdenadoNP(nodo);
+                                inserta_OrdenadoNP(nodo); 
+                            }
+                            
+                            nodo = lista;
+                            while(nodo && nodo->dec < d){
+                                nodo = nodo->sig;
+                            }
+                            
+                            if(n != d){
                                 nr = creaNodoNR(n);
                                 inserta_OrdenadoNR(nodo, nr);
                             }
@@ -151,7 +162,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                             //inserta_OrdenadoNP(nodo);
                             //creaLista(nodo);
                             //insertaFinal(nodo);   
-                           }
+                        }
                         
                     break;
                 case IDM_IMPRIMIR:
@@ -173,13 +184,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
             corre = lista;
             if(band){
                 imprimeLista(hdc);
-                /*
-                while(corre){
-                    itoa(corre->dec, cad, 10);
-                    TextOut(hdc, x += 20, y, cad, 10);
-                    corre = corre->sig;
-                }
-                */
+               
             }
             EndPaint(hWnd, &ps);
             break;
@@ -213,6 +218,7 @@ LRESULT CALLBACK Combo(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
 
     char cad[4] = "100";
     static HWND hCombo;
+    NP *corre;
 
     switch (message){
         case WM_INITDIALOG:
@@ -261,52 +267,28 @@ NP *creaNodoNP(int n){
 }
 
 NR *creaNodoNR(int n){
-
     NR *nodo = new NR;
     nodo->num = n;
     nodo->sig = NULL;
     return nodo;
 }
 
-void creaLista(NP *n){
-    n -> sig = lista;
-    lista = n;
-}
-/*
-int insertaOrd(NP *lista, int dato){
-    int resp;
-    NP nuevo;
-
-    if(*lista == NULL || dato < lista->num){
-        resp = creaNodo(&nuevo, dato);
-        if(resp){
-            nuevo->sig = *lista;
-            *lista = nuevo;
-        }
-    }
-    else{
-        resp = insertaOrd(&(*lista)->sig, dato);
-    }
-}
-*/
-
 BOOL Busca_Dec(int d){
     NP *c1 = lista;
-    BOOL band = FALSE;
-
     while(c1){
         if(c1->dec != d){
             c1 = c1->sig;
         }
         else{
-            band = TRUE;
-            break;
+            return TRUE;
         }
     }
-    return band;
+    return FALSE;
 }
 
 void inserta_OrdenadoNP(NP *np){    
+    NP *corre;
+
     if(!lista || lista->dec > np->dec){
         np->sig = lista;
         lista = np;
@@ -333,21 +315,25 @@ void inserta_OrdenadoNP(NP *np){
 }
 
 // np= nodo abajo para insertar el nuevo(nr) en la LiLi
-void inserta_OrdenadoNR(NP *np, NR *nr){
+BOOL inserta_OrdenadoNR(NP *np, NR *nr){
     NR *c2;
 
-    if(np->abajo->num > nr->num){
+    if(!np->abajo || np->abajo->num > nr->num){
         nr->sig = np->abajo;
         np->abajo = nr;
     }
     else{
-        c2 = (NR*)(np->abajo);
+        c2 = np->abajo;
         if(c2->num < nr->num){
             while(c2->sig){
-                if(c2->sig->num > nr->num)
+                if(c2->sig->num > nr->num){
                    break;
+                }
                 c2 = c2->sig;
             }
+        }
+        if(c2->num == nr->num){
+            return FALSE;
         }
         if(!(c2->sig)){
             nr->sig = c2->sig;
@@ -358,6 +344,7 @@ void inserta_OrdenadoNR(NP *np, NR *nr){
             c2->sig = nr;
         }
     }
+    return TRUE;
 }
 
 void imprimeLista(HDC hdc){

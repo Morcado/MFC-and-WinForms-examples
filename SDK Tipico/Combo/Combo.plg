@@ -6,20 +6,23 @@
 --------------------Configuration: Combo - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP1E60.tmp" with contents
+Creating command line "rc.exe /l 0x80a /fo"Debug/Combo.res" /d "_DEBUG" "C:\Users\Oscar Patiño\Desktop\Visual 2017\SDK Tipico\Combo\Combo.rc"" 
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP7213.tmp" with contents
 [
-/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Combo.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\Users\Oscar Patiño\Desktop\Visual 2017\SDK Tipico\Combo\Combo.cpp"
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Combo.pdb" /debug /machine:I386 /out:"Debug/Combo.exe" /pdbtype:sept 
+".\Debug\Combo.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Combo.res"
 ]
-Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP1E60.tmp" 
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP7213.tmp"
 <h3>Output Window</h3>
-Compiling...
-Combo.cpp
+Compiling resources...
+Linking...
 
 
 
 <h3>Results</h3>
-Combo.obj - 0 error(s), 0 warning(s)
+Combo.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>
