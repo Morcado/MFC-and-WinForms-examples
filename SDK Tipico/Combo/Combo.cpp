@@ -17,7 +17,7 @@ TCHAR szWindowClass[MAX_LOADSTRING];                                // The title
 
 NP *lista;
 
-int x = 100, y = 100;
+int x = 100, y = 100, numCombos = 0;
 BOOL band, dband = FALSE;
 char cad[10];
 
@@ -117,16 +117,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
     TCHAR szHello[MAX_LOADSTRING];
     LoadString(hInst, IDS_HELLO, szHello, MAX_LOADSTRING);
 
-    RECT rt, rtMarco;
+    RECT rt;
 
     int numeros, i, n, d;
     NR *nr;
-    NP *corre, *nodo;
+    NP *aux, *np;
     GetClientRect(hWnd, &rt);
 
     switch (message){
-        case WM_CREATE:
-            GetWindowRect(hWnd, &rtMarco);
+        case WM_CREATE:          
             break;
         case WM_COMMAND:
             wmId    = LOWORD(wParam);
@@ -145,23 +144,24 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                             n = rand()%100;
                             d = n/10*10;
                             if(Busca_Dec(d) == FALSE){
-                                nodo = creaNodoNP(d);
-                                inserta_OrdenadoNP(nodo); 
+                                np = creaNodoNP(d);
+                                inserta_OrdenadoNP(np);
+                                numCombos++;
                             }
                             
-                            nodo = lista;
-                            while(nodo && nodo->dec < d){
-                                nodo = nodo->sig;
+                            np = lista;
+                            while(np && np->dec < d){
+                                np = np->sig;
                             }
                             
                             if(n != d){
                                 nr = creaNodoNR(n);
-                                inserta_OrdenadoNR(nodo, nr);
+                                inserta_OrdenadoNR(np, nr);
                             }
-                            //nodo = creaNodoNP(d);
-                            //inserta_OrdenadoNP(nodo);
-                            //creaLista(nodo);
-                            //insertaFinal(nodo);   
+                            //np = creanpNP(d);
+                            //inserta_OrdenadoNP(np);
+                            //creaLista(np);
+                            //insertaFinal(np);   
                         }
                         
                     break;
@@ -181,7 +181,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
             break;
         case WM_PAINT:
             hdc = BeginPaint(hWnd, &ps);
-            corre = lista;
+            aux = lista;
             if(band){
                 imprimeLista(hdc);
                
@@ -202,6 +202,7 @@ LRESULT CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
 
     switch (message){
         case WM_INITDIALOG:
+            
                 return TRUE;
 
         case WM_COMMAND:
@@ -215,36 +216,63 @@ LRESULT CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
 }
 
 LRESULT CALLBACK Combo(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
-
-    char cad[4] = "100";
+    
+    RECT rtDlg, rtMarco, rtTamCliente;
     static HWND hCombo;
-    NP *corre;
+    NP *aux;
+    NR *aux2;
+    
+    static BOOL bband = FALSE;
+    int tamDlg;
+    int tamCombo = 60, espCombo, i, posCombo;// idCombo;
 
     switch (message){
         case WM_INITDIALOG:
-            hCombo = GetDlgItem(hDlg, IDC_COMBO1);
+            //hCombo = GetDlgItem(hDlg, IDC_COMBO1);
+            GetClientRect(hDlg, &rtDlg);
+            GetWindowRect(hDlg, &rtMarco);
+            tamDlg = rtDlg.right + 6;//(rtMarco.right - rtMarco.left) - 6;
+            espCombo = (tamDlg - (tamCombo*numCombos))/(numCombos + 1);
+            aux = lista;
+            
+            for(i = 0; i < numCombos; i ++){
+                posCombo = espCombo*i + tamCombo*i + espCombo;
+                aux->dlgItem = i + 2000;
+                hCombo = CreateWindow("COMBOBOX", 0, CBS_SIMPLE|WS_CHILD|WS_VISIBLE|WS_VSCROLL, posCombo, 10, tamCombo, 160, hDlg, (HMENU)aux->dlgItem, hInst, NULL);
+                aux->hCombo = hCombo;
+                
+                aux = aux->sig;
+            }
+            bband = TRUE;
             break;
         case WM_COMMAND:
             switch(LOWORD(wParam)){
                 case IDC_ACCION:
-                    corre = lista;
-                    while(corre){
-                        //itoa(corre->num, cad, 10);
-                        SendMessage(hCombo, CB_INSERTSTRING, -1, (LPARAM)(LPCTSTR)cad);
-                        //SendMessage(hCombo, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)cad);
-                        corre = corre->sig;
-                    }
+                    if(bband){
+                        aux = lista;
+                        while(aux){
+                            itoa(aux->dec, cad, 10);
+                            //idCombo = GetDlgCtrlID(aux->hCombo);
+                            SetDlgItemText(hDlg, aux->dlgItem, cad); //para la decena en el edit del combo
+                        
+                            aux2 = aux->abajo;
+                            while(aux2){
+                                itoa(aux2->num, cad, 10);
+                                SendMessage(aux->hCombo, CB_INSERTSTRING, 0, (LPARAM)(LPCTSTR)cad); //para el numero que va en la decena
+                                aux2 = aux2->sig;
+                            }
+                            //SendMessage(hCombo, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)cad);
+                            aux = aux->sig;
+                        }
                     
-
-                    //SetDlgItemText(hDlg, IDC_COMBO1, "100");
-                    //SendDlgItemMessage(hDlg, IDC_COMBO1, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)"100");
-                    //SendMessage(hCombo, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)"100");
-                    //SendMessage(hCombo, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)"120");
-                    SendDlgItemMessage(hDlg, IDC_COMBO1, CB_SETCURSEL, 0, 0);
+                        //SetDlgItemText(hDlg, IDC_COMBO1, "100");
+                        //SendDlgItemMessage(hDlg, IDC_COMBO1, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)"100");
+                        SendDlgItemMessage(hDlg, IDC_NUEVO, CB_SETCURSEL, 0, 0);
+                        bband = FALSE;
+                    }
                 break;
-                
                 case IDOK:
-                case IDCANCEL:
+                case IDCANCEL:   
                     EndDialog(hDlg, LOWORD(wParam));
                     return TRUE;
                     break;
@@ -259,18 +287,18 @@ void iniciaLista(){
 }
 
 NP *creaNodoNP(int n){
-    NP *nodo = new NP;
-    nodo->dec = n;
-    nodo->sig = NULL;
-    nodo->abajo = NULL;
-    return nodo;
+    NP *np = new NP;
+    np->dec = n;
+    np->sig = NULL;
+    np->abajo = NULL;
+    return np;
 }
 
 NR *creaNodoNR(int n){
-    NR *nodo = new NR;
-    nodo->num = n;
-    nodo->sig = NULL;
-    return nodo;
+    NR *nr = new NR;
+    nr->num = n;
+    nr->sig = NULL;
+    return nr;
 }
 
 BOOL Busca_Dec(int d){
@@ -287,87 +315,87 @@ BOOL Busca_Dec(int d){
 }
 
 void inserta_OrdenadoNP(NP *np){    
-    NP *corre;
+    NP *aux;
 
     if(!lista || lista->dec > np->dec){
         np->sig = lista;
         lista = np;
     }
     else{
-        corre = lista;
-        if(corre && corre->dec < np->dec){
-            while(corre->sig){
-                if(corre->sig->dec > np->dec){
+        aux = lista;
+        if(aux && aux->dec < np->dec){
+            while(aux->sig){
+                if(aux->sig->dec > np->dec){
                    break;
                 }
-                corre = corre->sig;
+                aux = aux->sig;
             }
         }
-        if(!(corre->sig)){
-            np->sig = corre->sig;
-            corre->sig = np;
+        if(!(aux->sig)){
+            np->sig = aux->sig;
+            aux->sig = np;
         }
         else{
-                np->sig = corre->sig;
-                corre->sig = np;
+                np->sig = aux->sig;
+                aux->sig = np;
         }
     }
 }
 
 // np= nodo abajo para insertar el nuevo(nr) en la LiLi
 BOOL inserta_OrdenadoNR(NP *np, NR *nr){
-    NR *c2;
+    NR *aux;
 
     if(!np->abajo || np->abajo->num > nr->num){
         nr->sig = np->abajo;
         np->abajo = nr;
     }
     else{
-        c2 = np->abajo;
-        if(c2->num < nr->num){
-            while(c2->sig){
-                if(c2->sig->num > nr->num){
+        aux = np->abajo;
+        if(aux->num < nr->num){
+            while(aux->sig){
+                if(aux->sig->num > nr->num){
                    break;
                 }
-                c2 = c2->sig;
+                aux = aux->sig;
             }
         }
-        if(c2->num == nr->num){
+        if(aux->num == nr->num){
             return FALSE;
         }
-        if(!(c2->sig)){
-            nr->sig = c2->sig;
-            c2->sig = nr;
+        if(!(aux->sig)){
+            nr->sig = aux->sig;
+            aux->sig = nr;
         }
         else{
-            nr->sig = c2->sig;
-            c2->sig = nr;
+            nr->sig = aux->sig;
+            aux->sig = nr;
         }
     }
     return TRUE;
 }
 
 void imprimeLista(HDC hdc){
-    NP *corre = lista;
-    NR *corre2;
+    NP *aux = lista;
+    NR *aux2;
     int x = 100, y = 100;
     char cad[3];
     int tam;
 
-    while(corre){
-        itoa(corre->dec, cad, 10);
+    while(aux){
+        itoa(aux->dec, cad, 10);
         tam = strlen(cad);
         TextOut(hdc, x, y, cad, tam);
-        corre2 = corre->abajo;
+        aux2 = aux->abajo;
 
-        while(corre2){
-            itoa(corre2->num, cad, 10);
+        while(aux2){
+            itoa(aux2->num, cad, 10);
             tam = strlen(cad);
             TextOut(hdc, x += 25, y, cad, tam);
-            corre2 = corre2->sig;
+            aux2 = aux2->sig;
         }
         y += 20;
         x = 100;
-        corre = corre->sig;
+        aux = aux->sig;
     }
 }

@@ -15,6 +15,8 @@ struct reg{
     int dec;
     NP *sig;
     NR *abajo;
+    HWND hCombo;
+    int dlgItem;
 };
 
 struct reg1{
