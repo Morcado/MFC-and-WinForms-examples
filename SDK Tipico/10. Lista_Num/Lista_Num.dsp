@@ -132,6 +132,10 @@ SOURCE=.\small.ico
 # End Group
 # Begin Source File
 
+SOURCE=.\info.txt
+# End Source File
+# Begin Source File
+
 SOURCE=.\ReadMe.txt
 # End Source File
 # End Target

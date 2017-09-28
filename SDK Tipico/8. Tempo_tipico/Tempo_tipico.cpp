@@ -139,7 +139,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
 			hdc = BeginPaint(hWnd, &ps);
             if(band){
                 itoa(i, cad, 10);
-                TextOut(hdc, x, y, cad, 4);
+                TextOut(hdc, i, y, cad, 4);
             }
 			EndPaint(hWnd, &ps);
 			break;

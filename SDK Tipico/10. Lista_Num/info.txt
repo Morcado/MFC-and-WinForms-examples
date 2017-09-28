@@ -1,0 +1,31 @@
+Métodos:
+
+GetDlgItem: recupera un handle de un control en el cuadro
+de diálogo especificado
+
+HWND GetDlgItem(
+  HWND hDlg,       // handle de cuadro de diálogo
+  int nIDDlgItem   // identificador del control
+);
+
+SendDlgItemMessage:envía un mensaje al control especificado de 
+un cuadro de diálogo
+
+LONG SendDlgItemMessage( 
+  HWND hDlg,      // handle de cuadro de diálogo
+  int nIDDlgItem, // identificador de control 
+  UINT Msg,       // mensaje a enviar
+  WPARAM wParam,  // primer parametro del mensaje
+  LPARAM lParam   // segundo parámetro del mensaje
+); 
+
+SendMessage: envía un mensaje a la ventana o ventanas. la función llama
+al wndproc de la ventana y no regresa hasta que la vetana ha procesado
+el mensaje
+
+LRESULT SendMessage(  
+  HWND hWnd,      // handle de la ventana destino
+  UINT Msg,       // mensaje a enviar
+  WPARAM wParam,  // primer parametro
+  LPARAM lParam   // segundo parametro
+); 

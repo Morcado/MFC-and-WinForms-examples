@@ -1,5 +1,14 @@
-// Lista_Num.cpp : Defines the entry point for the application.
-//
+/*
+    Fecha: 25 de septiembre de 2017
+    Nombre: OSCAR ARMANDO GONZÁLEZ PATIÑO
+    Funcionalidad: Imprime una lista de listas
+    Métodos: GetDlgItem
+    Handles:
+    Mensajes:
+    Tipos:
+    Estructuras:
+
+*/
 
 #include "stdafx.h"
 #include "resource.h"
@@ -126,14 +135,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                     srand((unsigned)time(NULL));
                     ini();
                     numeros = rand()%15 + 15;
-                        for(i = 0; i < numeros; i ++){
-                            nn = rand()%100;
-                            nodo = creaNodo(nn);
-                            //creaLista(nodo);
-                            insertaFinal(nodo);   
-                           }
-                        band = TRUE;
-                        InvalidateRect(hWnd, &rt, FALSE);
+                    for(i = 0; i < numeros; i ++){
+                        nn = rand()%100;
+                        nodo = creaNodo(nn);
+                        creaLista(nodo);
+                        //insertaFinal(nodo);   
+                       }
+                    band = TRUE;
+                    InvalidateRect(hWnd, &rt, FALSE);
+                    break;
                 case IDM_COMBO:
                     DialogBox(hInst, (LPCTSTR)IDD_COMBO, hWnd, (DLGPROC)Combo);
                     break;
@@ -150,10 +160,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
             if(band){
                 while(corre){
                     itoa(corre->num, cad, 10);
-                    TextOut(hdc, x += 20, y, cad, 10);
+                    TextOut(hdc, x += 20, y, cad, strlen(cad));
                     corre = corre->sig;
                 }
             }
+            x = 100;
 			EndPaint(hWnd, &ps);
 			break;
 		case WM_DESTROY:
@@ -237,5 +248,5 @@ void creaLista(Nodo *n){
 }
 
 void creaGrupos(Nodo nodo){
-    if
+    
 }

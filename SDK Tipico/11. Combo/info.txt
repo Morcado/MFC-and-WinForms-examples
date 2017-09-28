@@ -1,0 +1,48 @@
+Métodos
+
+CreateWindow: crea una ventana sobrepuesta o una ventana hija. Especifica
+la clase de la ventana, el título, el estilo, y opcionalmente la posicion
+y el tamaño de la ventana
+
+HWND CreateWindow(  
+  LPCTSTR lpClassName,  // apuntadoro al nombre de la clase de la ventana
+  LPCTSTR lpWindowName, // apuntador al nombre de la ventana
+  DWORD dwStyle,        // estilo de la ventana
+  int x,                // posicion horizontal de la ventana
+  int y,                // posicion vertical de la ventana
+  int nWidth,           // ancho de la ventana
+  int nHeight,          // alto de la ventana
+  HWND hWndParent,      // handle de la ventana padre
+  HMENU hMenu,          // handle al identificador del menu
+  HANDLE hInstance,     // handle a la instancia de aplicacion
+  LPVOID lpParam        // pointer a los datos de creacion de ventan
+); 
+
+lpClassName:
+    BUTTON  
+    COMBOBOX 
+	EDIT
+	LISTBOX
+
+
+dwStyle:
+    WS_BORDER Crea una ventana con un borde delgado
+    WS_CAPTION Crea una ventana con un título
+	WS_HSCROLL Crea una ventana con una barra horizontal
+
+
+GetClientRect: obtiene las coordenadas del area de cliente de una ventana
+y las guarda en un RECT
+
+BOOL GetClientRect(
+  HWND hWnd,      // handle de la ventana
+  LPRECT lpRect   // estructura del RECT para guardar las coordenadas
+);
+
+GetWindowRect: obtiene las dimensiones del rectángulo que rodea la 
+ventana y las guarda en un RECT
+
+BOOL GetWindowRect(  
+  HWND hWnd,      // handle de la ventana
+  LPRECT lpRect   // direccion de la estructura del RECT
+);  

@@ -35,3 +35,15 @@ Se entrega proyecto de Diálogo_Controles				OK
 Se entrega proyecto de botones_Tipico					OK
 Se entrega proyecto de Tempo_Tipico 	OK		le falta caminar
 Se entrega proyecto de Pelota_tipico					OK
+
+------------------------------------------------------------------------
+Fecha: 25 de septiembre de 2017
+
+Se entrega proyecto de lista de listas		OK
+Se entrega proyecto de combos			OK
+Se entrega proyecto de PreExamen		OK falta terminar.
+-----------------------------------------------------------------------
+Fecha: 27 de septiembre de 2017
+
+Se entrega proyecto Preexamen corregido
+Se entrega proyecto Grafo_Adhoc
