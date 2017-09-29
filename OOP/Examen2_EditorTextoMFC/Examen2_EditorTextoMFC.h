@@ -1,0 +1,14 @@
+#ifndef EXAMEN2_EDITORTEXTOMFC
+#define EXAMEN2_EDITORTEXTOMFC
+
+
+
+
+
+
+
+
+
+
+
+#endif

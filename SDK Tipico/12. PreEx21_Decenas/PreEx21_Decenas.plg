@@ -6,21 +6,30 @@
 --------------------Configuration: PreEx21_Decenas - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPD1FD.tmp" with contents
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPA366.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/PreEx21_Decenas.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\Oscar Patiño\Desktop\Visual 2017\SDK Tipico\12. PreEx21_Decenas\PreEx21_Decenas.cpp"
+]
+Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPA366.tmp" 
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPA367.tmp" with contents
 [
 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/PreEx21_Decenas.pdb" /debug /machine:I386 /out:"Debug/PreEx21_Decenas.exe" /pdbtype:sept 
 ".\Debug\PreEx21_Decenas.obj"
 ".\Debug\StdAfx.obj"
 ".\Debug\PreEx21_Decenas.res"
 ]
-Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPD1FD.tmp"
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPA367.tmp"
 <h3>Output Window</h3>
+Compiling...
+PreEx21_Decenas.cpp
+c:\users\oscar patiño\desktop\visual 2017\sdk tipico\12. preex21_decenas\preex21_decenas.cpp(4) : warning C4652: compiler option 'Generate Browser Info' inconsistent with precompiled header; current command-line option will override that defined in the precompiled header
 Linking...
 
 
 
 <h3>Results</h3>
-PreEx21_Decenas.exe - 0 error(s), 0 warning(s)
+PreEx21_Decenas.exe - 0 error(s), 1 warning(s)
 </pre>
 </body>
 </html>

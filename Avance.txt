@@ -45,5 +45,8 @@ Se entrega proyecto de PreExamen		OK falta terminar.
 -----------------------------------------------------------------------
 Fecha: 27 de septiembre de 2017
 
-Se entrega proyecto Preexamen corregido
-Se entrega proyecto Grafo_Adhoc
+Se entrega proyecto Preexamen2.1 corregido		OK
+Se entrega proyecto Grafo_Adhoc				OK
+
+Rev.
+	Solo detalles.

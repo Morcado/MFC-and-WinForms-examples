@@ -168,9 +168,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam){
                     break;
                 case IDM_IMPRIMIR:
                     band = TRUE;
-                    InvalidateRect(hWnd, &rt, FALSE);
+                    InvalidateRect(hWnd, &rt, TRUE);
                     break;
                 case IDM_COMBO:
+                    
                     DialogBox(hInst, (LPCTSTR)IDD_COMBO, hWnd, (DLGPROC)Combo);
                     break;
                 case IDM_EXIT:
@@ -220,6 +221,8 @@ LRESULT CALLBACK Combo(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
     
     RECT rtDlg, rtMarco, rtTamCliente;
     static HWND hCombo;
+    static HWND hOk;
+    static HWND hAccion;
     NP *aux;
     NR *aux2;
     
@@ -229,34 +232,33 @@ LRESULT CALLBACK Combo(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
 
     switch (message){
         case WM_INITDIALOG:
-            //hCombo = GetDlgItem(hDlg, IDC_COMBO1);
-            GetClientRect(hDlg, &rtDlg);
+            hOk = GetDlgItem(hDlg, IDOK);
+            hAccion = GetDlgItem(hDlg, IDC_ACCION);
             GetWindowRect(hDlg, &rtMarco);
-            tamDlg = rtDlg.right + 6;//(rtMarco.right - rtMarco.left) - 6;
-            //espCombo = (tamDlg - (tamCombo*numCombos))/(numCombos + 1);
-            espCombo = 25;
-            aux = lista;
-            
-            for(i = 0; i < numCombos; i ++){
-                posCombo = espCombo*i + tamCombo*i + espCombo;
-                aux->dlgItem = i + 2000;
-                hCombo = CreateWindow("COMBOBOX", 0, CBS_SIMPLE|WS_CHILD|WS_VISIBLE|WS_VSCROLL, posCombo, 20, tamCombo, 160, hDlg, (HMENU)aux->dlgItem, hInst, NULL);
-                aux->hCombo = hCombo;
-                
-                aux = aux->sig;
-            }
-            bband = TRUE;
+            SetWindowPos(hDlg, HWND_TOP, rtMarco.left, rtMarco.top, 25*(numCombos+1)+tamCombo*numCombos, rtMarco.bottom-rtMarco.top, SWP_NOZORDER);
+            GetClientRect(hDlg, &rtTamCliente);
+            SetWindowPos(GetDlgItem(hDlg, IDC_ACCION),HWND_TOP, rtTamCliente.right/2-44, rtTamCliente.bottom-44-12, 70, 44, SWP_SHOWWINDOW);
+            SetWindowPos(hOk,HWND_TOP, rtTamCliente.right-70-12, rtTamCliente.bottom-22-12, 70, 22, SWP_NOZORDER);
+            ShowWindow(hOk, SW_SHOWNORMAL);
+            bband = TRUE;            
             break;
         case WM_COMMAND:
             switch(LOWORD(wParam)){
                 case IDC_ACCION:
-                    if(bband){
-                        GetWindowRect(hDlg, &rtMarco);
-                        SetWindowPos(hDlg, HWND_TOP, rtMarco.left, rtMarco.top, 25*(numCombos+1)+tamCombo*numCombos, rtMarco.bottom-rtMarco.top, SWP_NOZORDER);
-                        //MoveWindow(GetDlgItem(hDlg, IDOK), rtMarco.right, rtMarco.bottom, 40, 40, );
-                        GetWindowRect(hDlg, &rtMarco);
-                        GetClientRect(hDlg, &rtTamCliente);
-                        SetWindowPos(GetDlgItem(hDlg, IDOK),HWND_TOP, rtTamCliente.right-70-12, rtTamCliente.bottom-22-12, 70, 22, SWP_NOZORDER); 
+                    if(bband){                        
+                        tamDlg = rtDlg.right + 6;
+                        espCombo = 25;
+                        aux = lista;
+            
+                        for(i = 0; i < numCombos; i ++){
+                            posCombo = espCombo*i + tamCombo*i + espCombo;
+                            aux->dlgItem = i + 2000;
+                            hCombo = CreateWindow("COMBOBOX", 0, CBS_SIMPLE|WS_CHILD|WS_VISIBLE|WS_VSCROLL, posCombo, 20, tamCombo, 160, hDlg, (HMENU)aux->dlgItem, hInst, NULL);
+                            aux->hCombo = hCombo;
+                
+                            aux = aux->sig;
+                        }
+                        
                         aux = lista;
                         while(aux){
                             itoa(aux->dec, cad, 10);
@@ -272,9 +274,7 @@ LRESULT CALLBACK Combo(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam){
                             //SendMessage(hCombo, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)cad);
                             aux = aux->sig;
                         }
-                    
-                        //SetDlgItemText(hDlg, IDC_COMBO1, "100");
-                        //SendDlgItemMessage(hDlg, IDC_COMBO1, CB_ADDSTRING, 0, (LPARAM)(LPCTSTR)"100");
+
                         SendDlgItemMessage(hDlg, IDC_NUEVO, CB_SETCURSEL, 0, 0);
                         bband = FALSE;
                     }

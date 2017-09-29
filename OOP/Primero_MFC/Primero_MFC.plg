@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Primero_MFC - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPC004.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Primero_MFC.pdb" /debug /machine:I386 /out:"Debug/Primero_MFC.exe" /pdbtype:sept 
+".\Debug\Primero_MFC.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\Primero_MFCDoc.obj"
+".\Debug\Primero_MFCView.obj"
+".\Debug\Primero_MFC.res"
+]
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPC004.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+Primero_MFC.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
