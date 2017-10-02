@@ -96,14 +96,6 @@ SOURCE=.\Examen2_EditorTextoMFC.cpp
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
-# Begin Source File
-
-SOURCE=.\CCascaron_Frame.h
-# End Source File
-# Begin Source File
-
-SOURCE=.\CCascaron_MFC.h
-# End Source File
 # End Group
 # Begin Group "Resource Files"
 
