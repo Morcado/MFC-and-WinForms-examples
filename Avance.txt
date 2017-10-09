@@ -25,7 +25,6 @@ Fecha: 31 de agosto de 2017
 Se agrego la bandera a mouse tipico
 Se entrega editor de imagenes
 
-
 Rev.
 	OK
 ------------------------------------------------------------------------
@@ -49,4 +48,17 @@ Se entrega proyecto Preexamen2.1 corregido		OK
 Se entrega proyecto Grafo_Adhoc				OK
 
 Rev.
-	Solo detalles.
+	Solo detalles.		OK
+--------------------------------------------------------------------------------
+2 de octubre de 2017
+	Examen 2. Editor de Texto.
+Rev.
+	Se define un área dentro del área cliente, cuando se llena deve 
+	limpiarse y regresar el cursor al inicio.
+	Se compila estaticamente ligado y con la opción release.
+--------------------------------------------------------------------------------
+3 de octubre de 2017
+
+Se entrega Examen 2 Editor de texto corregido
+		
+

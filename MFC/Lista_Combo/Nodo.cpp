@@ -1,0 +1,25 @@
+// Nodo.cpp: implementation of the CNodo class.
+//
+//////////////////////////////////////////////////////////////////////
+
+#include "stdafx.h"
+#include "Lista_Combo.h"
+#include "Nodo.h"
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+CNodo::CNodo(int n){
+    numero = n;
+}
+
+CNodo::~CNodo(){
+
+}
+

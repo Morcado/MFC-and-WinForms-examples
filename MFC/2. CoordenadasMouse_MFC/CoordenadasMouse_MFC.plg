@@ -1,0 +1,29 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CoordenadasMouse_MFC - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPA29B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/CoordenadasMouse_MFC.pdb" /debug /machine:I386 /out:"Debug/CoordenadasMouse_MFC.exe" /pdbtype:sept 
+".\Debug\CoordenadasMouse_MFC.obj"
+".\Debug\CoordenadasMouse_MFCDoc.obj"
+".\Debug\CoordenadasMouse_MFCView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\CoordenadasMouse_MFC.res"
+]
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPA29B.tmp"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+CoordenadasMouse_MFC.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

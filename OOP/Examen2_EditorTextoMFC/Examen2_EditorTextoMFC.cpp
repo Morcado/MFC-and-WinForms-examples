@@ -4,8 +4,9 @@
 using namespace std;    
 
 stack <int> s;
-int x = 0, y = 0;
+int x = 100, y = 100;
 bool flag = false;
+bool uno = false;
 
 class CCascaron_Frame: public CFrameWnd{ //clase marco
     afx_msg void OnPaint();
@@ -37,6 +38,7 @@ class CCascaron_MFC: public CWinApp{ //clase aplicación
 
 void CCascaron_Frame :: OnPaint(){
     CPaintDC dc(this);
+    dc.Rectangle(x - 5, y - 5, x + 505, y + 77);
     if(flag){
         dc.TextOut(x, y, "Hello");
     }
@@ -48,67 +50,75 @@ void CCascaron_Frame :: OnChar(UINT nChar){
 
     CFont font;
     CPen pen;
-    RECT rt;
-    GetClientRect(&rt);
+    static int tam = 9, lin = 15;
+    RECT rt = {100, 100, 600, 172};
+    /*if(!uno){ 
+        pDC->Ellipse(300, 300, 400, 400);
+        uno= true;
+    }*/
+    //rt.top = 0;
+    //rt.left = 0;
+    //GetClientRect(&rt);
 
     pen.CreatePen(PS_DASH, 1, (COLORREF)0x00FFFFFF);
     font.CreateFont(12, 8, 0, 0, FW_NORMAL, false, false, 0, ANSI_CHARSET, OUT_CHARACTER_PRECIS, 
             CLIP_CHARACTER_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH, "Lucida Console");
     pDC->SelectObject(&pen);
     pDC->SelectObject(&font);
-    //CSize size;
-    //size = pDC->GetTextExtent(nChar)
-    //pDC->TextOut(x, y, "_");
-    //pDC->Rectangle(x, y, x + 9, y + 15);
 
     switch(nChar){
         case 8: //borrar
-            if(x > 0){ //si borra mientras no esté cerca del principio
-                pDC->Rectangle(x, y, x + 9, y + 15); //borra el caracter
-                pDC->Rectangle(x + 9*2, y, x + 9, y + 15); //borra la linea siguiente
-                x -= 9; //retrocede el cursor
+            if(x > rt.left){ //si borra mientras no esté cerca del principio
+                pDC->Rectangle(x, y, x + tam, y + lin); //borra el caracter
+                pDC->Rectangle(x + tam*2, y, x + tam, y + lin); //borra la linea siguiente
+                x -= tam; //retrocede el cursor
             }
             else{
-                if(y > 0){  //si borra al principio de la linea y aún hay lineas arriba
-                    pDC->Rectangle(x + 9*2, y, x + 9, y + 15);
-                    y -= 15;  
+                if(y > rt.top){  //si borra al principio de la linea y aún hay lineas arriba
+                    pDC->Rectangle(x + tam*2, y, x + tam, y + lin);
+                    y -= lin;  
                     x = s.top(); //recupera la ultima distancia guardada de la x
                     s.pop(); 
                 }
             }
         break;
         case 9: //tabulador
-            if(x < rt.right - 20){
-                pDC->Rectangle(x + 9*2, y, x + 9, y + 15); //borra la linea siguiente
-                x += 4*9; //agrega cuatro espacios
+            if(x < rt.right - 44){
+                pDC->Rectangle(x + tam*2, y, x + tam, y + lin); //borra la linea siguiente
+                x += 4*tam; //agrega cuatro espacios
             }
             break;
         case '\r': //enter
-            pDC->Rectangle(x + 9*2, y, x + 9, y + 15); // dibuja un rectangulo blanco siguiente del tabulador
-            s.push(x); //guarda la distancia de la x y reinicia x y aumenta y
-            y += 15;
-            x = 0;
+            if(y < rt.bottom - lin){
+                pDC->Rectangle(x + tam*2, y, x + tam, y + lin); // dibuja un rectangulo blanco siguiente del tabulador
+                s.push(x); //guarda la distancia de la x y reinicia x y aumenta y
+                y += lin;
+                x = rt.left;
+            }
             break;
         default: //cualquier tecla
             
             if(x > rt.right - 20){ //si llega al final de la línea
-                pDC->Rectangle(x + 9*2, y, x + 9, y + 15);
+                pDC->Rectangle(x + tam*2, y, x + tam, y + lin);
                 s.push(x); //garda la ultima equiz
-                y += 15;
-                x = 0;
+                y += lin;
+                x = rt.left;
                 if(y > rt.bottom){ //cuando llega al ultimo limite
-                    x = y = 0; //reinicia y y x
+                    x = rt.top; //reinicia y y x
+                    y = rt.left;
                     while(!s.empty()){ //vacia la pila de x
                         s.pop();
                     }
-                    x -= 9;
-                    Invalidate(); //repinta todo
+                    x -= tam;
+                    InvalidateRect(&rt, TRUE); //repinta todo
                 }
             }
-            pDC->TextOut(x += 9, y, nChar);
+            pDC->TextOut(x += tam, y, nChar);
             
     }
-    pDC->TextOut(x + 9, y, "_");
+    //Invalidate();
+    //InvalidateRect(&rt, FALSE);
+    pDC->TextOut(x + tam, y, "_");
     pen.DeleteObject();
     font.DeleteObject();
 }

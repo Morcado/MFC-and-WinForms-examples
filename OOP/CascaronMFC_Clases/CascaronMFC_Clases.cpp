@@ -14,7 +14,7 @@ BEGIN_MESSAGE_MAP(CCascaron_Frame, CFrameWnd)
     ON_WM_CHAR()
     ON_WM_LBUTTONDOWN()
     ON_WM_PAINT()
-END_MESSAGE_MAP()
+END_MESSAGE_MAP() 
 
 void CCascaron_Frame :: OnPaint(){
     CPaintDC dc(this);

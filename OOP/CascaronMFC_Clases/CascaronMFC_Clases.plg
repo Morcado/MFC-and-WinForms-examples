@@ -6,16 +6,8 @@
 --------------------Configuration: CascaronMFC_Clases - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP5672.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /Fp"Debug/CascaronMFC_Clases.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\USERS\OSCAR PATIÑO\DESKTOP\VISUAL 2017\OOP\CascaronMFC_Clases\CascaronMFC_Clases.cpp"
-]
-Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP5672.tmp" 
 Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/CascaronMFC_Clases.pdb" /debug /machine:I386 /out:"Debug/CascaronMFC_Clases.exe" /pdbtype:sept  ".\Debug\CascaronMFC_Clases.obj" "
 <h3>Output Window</h3>
-Compiling...
-CascaronMFC_Clases.cpp
 Linking...
 
 
