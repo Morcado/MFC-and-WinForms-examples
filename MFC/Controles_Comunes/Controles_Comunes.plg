@@ -6,13 +6,8 @@
 --------------------Configuration: Controles_Comunes - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPBBAC.tmp" with contents
-[
-/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/Controles_Comunes.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"C:\Users\Oscar Patiño\Desktop\Visual 2017\MFC\Controles_Comunes\Progress.cpp"
-]
-Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPBBAC.tmp" 
-Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPBBAD.tmp" with contents
+Creating command line "rc.exe /l 0x80a /fo"Debug/Controles_Comunes.res" /d "_DEBUG" "C:\Users\Oscar Patiño\Desktop\Visual 2017\MFC\Controles_Comunes\Controles_Comunes.rc"" 
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP65F9.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Controles_Comunes.pdb" /debug /machine:I386 /out:"Debug/Controles_Comunes.exe" /pdbtype:sept 
 ".\Debug\Controles_Comunes.obj"
@@ -20,21 +15,19 @@ Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPBBAD.tmp" with 
 ".\Debug\Controles_ComunesView.obj"
 ".\Debug\MainFrm.obj"
 ".\Debug\Progress.obj"
+".\Debug\Slider.obj"
 ".\Debug\StdAfx.obj"
 ".\Debug\Controles_Comunes.res"
-".\Debug\Slider.obj"
 ]
-Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPBBAD.tmp"
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP65F9.tmp"
 <h3>Output Window</h3>
-Compiling...
-Progress.cpp
-C:\Users\Oscar Patiño\Desktop\Visual 2017\MFC\Controles_Comunes\Progress.cpp(60) : warning C4244: 'argument' : conversion from 'const double' to 'int', possible loss of data
+Compiling resources...
 Linking...
 
 
 
 <h3>Results</h3>
-Controles_Comunes.exe - 0 error(s), 1 warning(s)
+Controles_Comunes.exe - 0 error(s), 0 warning(s)
 </pre>
 </body>
 </html>

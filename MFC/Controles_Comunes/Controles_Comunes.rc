@@ -72,11 +72,11 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,131,192,50,14
     PUSHBUTTON      "Cancel",IDCANCEL,7,192,50,14
     CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",
-                    PBS_VERTICAL | PBS_SMOOTH | WS_BORDER,44,129,101,36
+                    PBS_VERTICAL | PBS_SMOOTH | WS_BORDER,42,129,101,36
     CONTROL         "Progress2",IDC_PROGRESS2,"msctls_progress32",
-                    PBS_VERTICAL | PBS_SMOOTH | WS_BORDER,82,70,25,60
+                    PBS_VERTICAL | PBS_SMOOTH,80,71,25,60
     CONTROL         "Progress3",IDC_PROGRESS3,"msctls_progress32",
-                    PBS_VERTICAL | PBS_SMOOTH | WS_BORDER,44,35,103,36
+                    PBS_VERTICAL | PBS_SMOOTH,42,48,103,25
     PUSHBUTTON      "Acción",IDC_BUTTON1,70,177,46,29
 END
 

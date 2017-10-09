@@ -19,9 +19,9 @@ Resource1=IDD_ABOUTBOX
 Resource2=IDR_MAINFRAME
 Class5=CAboutDlg
 Resource3=IDR_NUMEROS
-Resource4=IDD_ABOUTBOX (Spanish (Modern))
+Resource4=IDR_MAINFRAME (Spanish (Modern))
 Class6=CNumeros
-Resource5=IDR_MAINFRAME (Spanish (Modern))
+Resource5=IDD_ABOUTBOX (Spanish (Modern))
 Resource6=IDD_LISTA
 
 [CLS:CLista_ComboApp]

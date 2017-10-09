@@ -51,16 +51,7 @@ BOOL CProgress::OnInitDialog()
 {
 	CDialog::OnInitDialog();
 	SetTimer(IDT_TIMER, 20, NULL);
-    m_Progress2.SetRange(0, 100);
-    m_Progress3.SetRange(0, 100);
-    m_Progress.SetRange(0, 100);
 
-    m_Progress3.SetStep(-1);
-    m_Progress2.SetStep(1);
-    m_Progress.SetStep(0.5);
-
-    m_Progress2.SetPos(0);
-    m_Progress3.SetPos(100);
    
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
@@ -74,29 +65,19 @@ void CProgress::OnTimer(UINT nIDEvent){
             m_Progress3.StepIt();
             m_Progress2.StepIt();
             paso = m_Progress.StepIt();
-            if(paso >= 50){
-                m   
-            }
-            if(paso >= 100){
-
-            }
-
-
-            m_Progress3.StepIt();
-            paso = m_Progress.StepIt();
-            if(paso <= 0){
+            if(paso == 50){
+                m_Progress2.SetStep(-2);
                 m_Progress3.SetStep(0);
                 m_Progress3.SetPos(0);
-
-                //m_Progress2.SetPos(0);
-                m_Progress2.SetStep(-1);
-
-                m_Progress.SetPos(0);
-                m_Progress.SetStep(1);
-                paso2 = 1;
+            }
+            if(paso == 100){
+                m_Progress2.SetStep(0);
+                m_Progress2.SetPos(0);
+                m_Progress.SetPos(100);
+                m_Progress.SetStep(0);
             }
 
-
+            
         }
 	    CDialog::OnTimer(nIDEvent);
     }
@@ -104,4 +85,15 @@ void CProgress::OnTimer(UINT nIDEvent){
 
 void CProgress::OnAccion(){
     band = true;	
+        m_Progress2.SetRange(0, 100);
+    m_Progress3.SetRange(0, 100);
+    m_Progress.SetRange(0, 100);
+
+    m_Progress3.SetStep(-2);
+    m_Progress2.SetStep(0);
+    m_Progress.SetStep(1);
+
+    m_Progress.SetPos(0);
+    m_Progress2.SetPos(100);
+    m_Progress3.SetPos(100);
 }

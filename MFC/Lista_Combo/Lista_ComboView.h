@@ -36,6 +36,7 @@ public:
 
 // Implementation
 public:
+	int res;
 	CNodo* nodo;
 	CObList lista;
 	bool band;

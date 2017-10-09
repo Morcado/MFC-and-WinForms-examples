@@ -67,7 +67,7 @@ BOOL CNumeros::OnInitDialog() {
 
 void CNumeros::OnOk(){
     CNodo *c;
-    //m_Combo.DestroyWindow();
+
     POSITION pos = lista_combo.GetHeadPosition();
     POSITION pos2 = lista_combo.GetTailPosition();
     if(pos != pos2){
@@ -77,6 +77,7 @@ void CNumeros::OnOk(){
             delete(c);
         }
     }
+    EndDialog(IDOK);
     //m_Combo.DestroyWindow();
     //DestroyWindow();
     //lista_combo.Dump();

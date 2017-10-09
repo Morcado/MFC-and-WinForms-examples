@@ -13,6 +13,7 @@
 #define IDC_BUTTON1                     1005
 #define IDC_SLIDER1                     1006
 #define IDC_SLIDER2                     1007
+#define IDC_PROGRESS4                   1007
 
 // Next default values for new objects
 // 
@@ -21,7 +22,7 @@
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        132
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1007
+#define _APS_NEXT_CONTROL_VALUE         1008
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif

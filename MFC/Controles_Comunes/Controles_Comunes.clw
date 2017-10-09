@@ -18,10 +18,10 @@ ResourceCount=6
 Resource1=IDD_ABOUTBOX
 Resource2=IDR_MAINFRAME
 Class5=CAboutDlg
-Resource3=IDR_MAINFRAME (Spanish (Modern))
-Resource4=IDD_PROGRESS
+Resource3=IDD_PROGRESS
+Resource4=IDD_ABOUTBOX (Spanish (Modern))
 Class6=CProgress
-Resource5=IDD_ABOUTBOX (Spanish (Modern))
+Resource5=IDR_MAINFRAME (Spanish (Modern))
 Class7=CSlider
 Resource6=IDD_DIALOG1
 
@@ -172,8 +172,8 @@ ControlCount=6
 Control1=IDOK,button,1342242817
 Control2=IDCANCEL,button,1342242816
 Control3=IDC_PROGRESS1,msctls_progress32,1350565893
-Control4=IDC_PROGRESS2,msctls_progress32,1350565893
-Control5=IDC_PROGRESS3,msctls_progress32,1350565893
+Control4=IDC_PROGRESS2,msctls_progress32,1342177285
+Control5=IDC_PROGRESS3,msctls_progress32,1342177285
 Control6=IDC_BUTTON1,button,1342242816
 
 [CLS:CProgress]

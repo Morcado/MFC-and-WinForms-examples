@@ -93,7 +93,7 @@ CLista_ComboDoc* CLista_ComboView::GetDocument(){ // non-debug version is inline
 void CLista_ComboView::OnCrear(){
 	// TODO: Add your command handler code here
     int num, numeros;
-    POSITION pos1, pos2;
+    POSITION pos1;
     
     srand((unsigned)time(NULL));
     numeros = rand()%5+10;
@@ -128,10 +128,13 @@ void CLista_ComboView::OnCrear(){
             }
         }
     }
+
     dlgNumeros.lista_combo.AddHead(&lista);
-    dlgNumeros.DoModal();
-   //dlgNumeros.DestroyWindow();
+    res = dlgNumeros.DoModal();
+
+    if(res == IDOK){
+        lista.RemoveAll();
     
-	//band = true;
-    //Invalidate();
+    }
+   //dlgNumeros.DestroyWindow();
 }
