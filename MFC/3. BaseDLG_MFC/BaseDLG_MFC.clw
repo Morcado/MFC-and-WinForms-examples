@@ -61,13 +61,12 @@ Class=CBaseDLG_MFCDlg
 [DLG:IDD_BASEDLG_MFC_DIALOG (Spanish (Modern))]
 Type=1
 Class=CBaseDLG_MFCDlg
-ControlCount=6
+ControlCount=5
 Control1=IDOK,button,1342242817
 Control2=IDCANCEL,button,1342242816
 Control3=IDC_ACCION,button,1342242816
 Control4=IDC_EDIT1,edit,1350631552
 Control5=IDC_COMBO1,combobox,1344340226
-Control6=IDC_BUTTON1,button,1342242816
 
 [DLG:IDD_ABOUTBOX (Spanish (Modern))]
 Type=1

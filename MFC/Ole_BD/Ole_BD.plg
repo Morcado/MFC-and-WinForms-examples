@@ -1,0 +1,32 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ole_BD - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x80a /fo"Debug/Ole_BD.res" /d "_DEBUG" "C:\Users\Oscar Patiño\Desktop\Visual 2017\MFC\Ole_BD\Ole_BD.rc"" 
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP77F7.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Ole_BD.pdb" /debug /machine:I386 /out:"Debug/Ole_BD.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\Ole_BD.obj"
+".\Debug\Ole_BDDoc.obj"
+".\Debug\Ole_BDSet.obj"
+".\Debug\Ole_BDView.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Ole_BD.res"
+]
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP77F7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+Ole_BD.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

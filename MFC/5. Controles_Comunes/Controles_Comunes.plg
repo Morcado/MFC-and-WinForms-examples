@@ -1,0 +1,34 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Controles_Comunes - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x80a /fo"Debug/Controles_Comunes.res" /d "_DEBUG" "C:\Users\Oscar Patiño\Desktop\Visual 2017\MFC\5. Controles_Comunes\Controles_Comunes.rc"" 
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSP924B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Controles_Comunes.pdb" /debug /machine:I386 /out:"Debug/Controles_Comunes.exe" /pdbtype:sept 
+".\Debug\Controles_Comunes.obj"
+".\Debug\Controles_ComunesDoc.obj"
+".\Debug\Controles_ComunesView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\Progress.obj"
+".\Debug\Slider.obj"
+".\Debug\Spin.obj"
+".\Debug\StdAfx.obj"
+".\Debug\Controles_Comunes.res"
+]
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSP924B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Linking...
+
+
+
+<h3>Results</h3>
+Controles_Comunes.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

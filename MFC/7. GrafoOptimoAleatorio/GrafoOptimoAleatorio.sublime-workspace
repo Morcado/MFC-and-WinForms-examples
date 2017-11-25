@@ -1,0 +1,685 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"es",
+				"estaFumando"
+			],
+			[
+				"est",
+				"estaFumando"
+			],
+			[
+				"no",
+				"noFumando"
+			],
+			[
+				"esta",
+				"esta"
+			],
+			[
+				"ing",
+				"ing1"
+			],
+			[
+				"me",
+				"Mesa"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"buffer",
+				"buffercomp"
+			],
+			[
+				"h",
+				"hWnd"
+			],
+			[
+				"au",
+				"aux3"
+			],
+			[
+				"aux",
+				"aux3"
+			],
+			[
+				"inser",
+				"insertaCola"
+			],
+			[
+				"cre",
+				"creaNodoNR"
+			],
+			[
+				"Inserta",
+				"inserta_OrdenadoNP"
+			],
+			[
+				"ini",
+				"iniciaLista"
+			],
+			[
+				"Crea",
+				"creaNodoNP"
+			],
+			[
+				"IDC_",
+				"IDC_PREEX21_DECENAS"
+			],
+			[
+				"rt",
+				"rtMarco"
+			],
+			[
+				"tam",
+				"tamCombo"
+			],
+			[
+				"CreaNodo",
+				"creaNodoNR"
+			],
+			[
+				"sumar",
+				"sumarInt"
+			],
+			[
+				"pila",
+				"pila2"
+			],
+			[
+				"io",
+				"IOException"
+			],
+			[
+				"esc",
+				"escribeArchivo"
+			],
+			[
+				"file",
+				"FileWriter"
+			],
+			[
+				"n",
+				"new"
+			],
+			[
+				"File",
+				"FileWriter"
+			],
+			[
+				"fil",
+				"FileNotFound"
+			],
+			[
+				"fi",
+				"file"
+			],
+			[
+				"lan",
+				"lanzaExcepcion"
+			],
+			[
+				"mI",
+				"MiExcepcion"
+			],
+			[
+				"pr",
+				"println"
+			],
+			[
+				"FI",
+				"FileNotFoundException"
+			],
+			[
+				"nex",
+				"nextFloat()\tfunc"
+			],
+			[
+				"print",
+				"print()\tfunc"
+			],
+			[
+				"System",
+				"SYSTEM\tJava Class"
+			],
+			[
+				"iprinci",
+				"I-Principal\tinit"
+			],
+			[
+				"construc",
+				"constructorModifiers()\tfunc"
+			],
+			[
+				"construct",
+				"I-Constructor\tinit"
+			],
+			[
+				"Scanner",
+				"I-Scanner\tinit"
+			],
+			[
+				"thro",
+				"throw"
+			],
+			[
+				"thr",
+				"throws"
+			],
+			[
+				"st",
+				"static"
+			],
+			[
+				"dame",
+				"dameVentas"
+			],
+			[
+				"inc",
+				"incx"
+			],
+			[
+				"Em",
+				"Empleado"
+			],
+			[
+				"Emp",
+				"Empresa"
+			],
+			[
+				"em",
+				"EmpleadoAsalariadoComision"
+			],
+			[
+				"Empl",
+				"EmpleadoHoras"
+			],
+			[
+				"pu",
+				"public"
+			],
+			[
+				"scan",
+				"scan"
+			],
+			[
+				"m",
+				"main\tmethod (main)"
+			],
+			[
+				"Su",
+				"sucursales"
+			],
+			[
+				"retiro",
+				"retiro"
+			],
+			[
+				"i",
+				"iClave"
+			],
+			[
+				"ARC",
+				"arch"
+			],
+			[
+				"de",
+				"def\t#ifndef … #define … #endif"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"fac",
+				"factorial"
+			],
+			[
+				"se",
+				"segundos"
+			],
+			[
+				"GET",
+				"getch"
+			],
+			[
+				"I",
+				"icont"
+			],
+			[
+				"iA",
+				"iAux"
+			],
+			[
+				"iAu",
+				"iAux"
+			],
+			[
+				"ia",
+				"iAux"
+			],
+			[
+				"c",
+				"cAux"
+			],
+			[
+				"ge",
+				"getch"
+			],
+			[
+				"el",
+				"EL"
+			],
+			[
+				"V",
+				"void"
+			],
+			[
+				"RE",
+				"res"
+			],
+			[
+				"iTope",
+				"iTope"
+			],
+			[
+				"f",
+				"f"
+			],
+			[
+				"punt",
+				"puntos1"
+			],
+			[
+				"punto",
+				"puntos2"
+			],
+			[
+				"punts",
+				"puntos2"
+			],
+			[
+				"PUN",
+				"puntos"
+			],
+			[
+				"t",
+				"Tam"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"align",
+				"text-align"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"o",
+				"ol\tTag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "j",
+		"selected_items":
+		[
+			[
+				"j",
+				"Set Syntax: Java"
+			],
+			[
+				"c+",
+				"Set Syntax: C++"
+			],
+			[
+				"c",
+				"Set Syntax: C"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"in\t",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inta",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"ja",
+				"Set Syntax: Java"
+			],
+			[
+				"Snippet: ",
+				"Snippet: method (main)"
+			],
+			[
+				"",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"add",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"jav",
+				"Build With: JavaC"
+			],
+			[
+				"java\t",
+				"Set Syntax: Java"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"s c",
+				"Install Package Control"
+			],
+			[
+				"sc",
+				"Set Syntax: C"
+			],
+			[
+				"sy c",
+				"Set Syntax: C"
+			],
+			[
+				"buill",
+				"Build: Cancel"
+			],
+			[
+				"set c",
+				"Set Syntax: C"
+			],
+			[
+				"se c",
+				"Set Syntax: C"
+			],
+			[
+				"pl",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"uuid.uuid4()",
+			"import uuid"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 10/Mesa.java",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 10/Agente.java",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 10/Fumador.java",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 10/Principal.java",
+		"/C/Users/Oscar Patiño/Desktop/Visual 2017/SDK Tipico/3. Editor_figuras_tipico/Editor_figuras_tipico.cpp",
+		"/C/Program Files (x86)/Simon Tatham's Portable Puzzle Collection/source/puzzles/mines.c",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 9/Consumidor.java",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 9/Productor.java",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 9/Buffer.java",
+		"/C/Users/Oscar Patiño/Desktop/Sistemas Operativos A/Práctica 9/Principal.java",
+		"/C/Users/Oscar Patiño/Desktop/Nueva carpeta/odd_gnome.cpp",
+		"/C/Users/Oscar Patiño/Desktop/Nueva carpeta/odd gnome.cpp",
+		"/C/Users/Oscar Patiño/Desktop/Visual 2017/MFC/Examen2_EditorTextoMFC/Examen2_EditorTextoMFC.cpp",
+		"/C/Users/Oscar Patiño/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Oscar Patiño/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Oscar Patiño/Documents/Trabajos/4 semestre/POO/Parcial 4/Sobrecarga/PilaFraccion.h",
+		"/C/Users/Oscar Patiño/Documents/Trabajos/4 semestre/POO/Parcial 4/Sobrecarga/PilaFraccion.cpp",
+		"/C/Users/Oscar Patiño/Desktop/Visual 2017/SDK Tipico/13. Grafo_Adhoc/PreEx21_Decenas.cpp"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"me",
+			"case",
+			"15",
+			"9"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"mesa"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 96.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/javacompile.sublime-build",
+	"project": "GrafoOptimoAleatorio.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"j",
+				"C:\\Users\\Oscar Patiño\\Desktop\\Sistemas Operativos A\\Práctica 10\\Agente.java"
+			],
+			[
+				"",
+				"C:\\Users\\Oscar Patiño\\Desktop\\1.c"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

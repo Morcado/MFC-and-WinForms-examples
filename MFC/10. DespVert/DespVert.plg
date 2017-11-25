@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DespVert - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPFFC5.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"Debug/DespVert.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"C:\Users\Oscar Patiño\Desktop\Visual 2017\MFC\DespVert\DespVertView.cpp"
+]
+Creating command line "cl.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPFFC5.tmp" 
+Creating temporary file "C:\Users\OSCARP~1\AppData\Local\Temp\RSPFFC6.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/DespVert.pdb" /debug /machine:I386 /out:"Debug/DespVert.exe" /pdbtype:sept 
+".\Debug\DespVert.obj"
+".\Debug\StdAfx.obj"
+".\Debug\MainFrm.obj"
+".\Debug\DespVertDoc.obj"
+".\Debug\DespVertView.obj"
+".\Debug\DespVert.res"
+]
+Creating command line "link.exe @C:\Users\OSCARP~1\AppData\Local\Temp\RSPFFC6.tmp"
+<h3>Output Window</h3>
+Compiling...
+DespVertView.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+DespVert.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

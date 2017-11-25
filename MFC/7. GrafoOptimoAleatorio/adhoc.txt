@@ -1,0 +1,53 @@
+/****************************************************************/
+//adhoc 
+    /*
+    //esquina 0, 0
+
+    //numero de relaciones o aristas
+    m_Grafo.InsertColumn(1, "Relación 1", LVCFMT_LEFT, 70, -1);
+    m_Grafo.InsertColumn(2, "Relación 2", LVCFMT_LEFT, 70, -1);
+    m_Grafo.InsertColumn(3, "Relación 3", LVCFMT_LEFT, 70, -1);
+    
+    //m_Grafo.InsertColumn(0, "Nodo", LVCFMT_CENTER, 60, -1);
+    //numero de nodos principlaes
+    m_Grafo.InsertItem(1, "A");
+    m_Grafo.InsertItem(2, "B");
+    m_Grafo.InsertItem(3, "C");
+     
+    //pesos de las relcaciones
+    m_Grafo.SetItemText(0, 1, "A_10");
+    m_Grafo.SetItemText(0, 2, "B_13");
+    m_Grafo.SetItemText(0, 3, "C_30");
+    
+    m_Grafo.SetItemText(1, 1, "A_NULL");
+    m_Grafo.SetItemText(1, 2, "B_NULL");
+    m_Grafo.SetItemText(1, 3, "C_10");
+
+    m_Grafo.SetItemText(2, 1, "A_NULL");
+    m_Grafo.SetItemText(2, 2, "B_25");
+    m_Grafo.SetItemText(2, 3, "B_NULL");
+    */
+
+    //dice mi mama que siempre no
+    /*
+    int i = 0;
+    int maxNP = gDlg.GetCount(); //numero de nodos principales
+    int maxNR = calculaRelaciones();
+    POSITION posP = NULL;
+    POSITION posR = NULL;
+
+    m_Grafo.InsertColumn(0, "P/R", LVCFMT_RIGHT, 100, -1);
+    
+    for(i = 0; i < maxNR; i++){
+        m_Grafo.InsertColumn(1, "Relación 1", LVCFMT_LEFT, 70, -1);
+    }
+    
+    for(i = 0; i < maxNP; i++){
+        m_Grafo.InsertItem(1, "A");
+    }
+    
+    //llenado del control
+    while(posP){
+
+    }
+    */

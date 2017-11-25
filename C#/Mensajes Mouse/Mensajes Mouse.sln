@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mensajes Mouse", "Mensajes Mouse.csproj", "{CF038C91-1DE0-4E02-B198-FD8990A0429B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF038C91-1DE0-4E02-B198-FD8990A0429B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF038C91-1DE0-4E02-B198-FD8990A0429B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF038C91-1DE0-4E02-B198-FD8990A0429B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF038C91-1DE0-4E02-B198-FD8990A0429B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

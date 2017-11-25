@@ -5,7 +5,7 @@ Se entregan 4 programas de SDK Y 4 de SDK tipico con ayudas
 Los programas de SDK son:
 1. Cascaron: programa que muestra el hola mundo
 2. Coordenadas Mouse: programa que muestra las coordenadas del mouse cuando se da click
-3. Editor: programa que muestra unn cuadrado,  uun circulo, un rectangulo redondeado y una linea a  partir de los menus
+3. Editor: programa que muestra unn cuadrado,  un circulo, un rectangulo redondeado y una linea a  partir de los menus
 4. Mensajes mouse: programa que muestra cajas de texto cuando se da click derecho o click izquierdo
 
 Los programas de SDK tipico son
@@ -16,7 +16,7 @@ Los programas de SDK tipico son
 4. 
 
 Rev.
-    Mensajes Mouse tipico: Agregar la bandera
+Mensajes Mouse tipico: Agregar la bandera
 
 
 ------------------------------------------------------------------------
@@ -26,39 +26,77 @@ Se agrego la bandera a mouse tipico
 Se entrega editor de imagenes
 
 Rev.
-	OK
+    OK
 ------------------------------------------------------------------------
 Fecha: 11 de septiembre de 2017
 
-Se entrega proyecto de Diálogo_Controles				OK
-Se entrega proyecto de botones_Tipico					OK
-Se entrega proyecto de Tempo_Tipico 	OK		le falta caminar
-Se entrega proyecto de Pelota_tipico					OK
+Se entrega proyecto de Diálogo_Controles                OK
+Se entrega proyecto de botones_Tipico                   OK
+Se entrega proyecto de Tempo_Tipico     OK      le falta caminar
+Se entrega proyecto de Pelota_tipico                    OK
 
 ------------------------------------------------------------------------
 Fecha: 25 de septiembre de 2017
 
-Se entrega proyecto de lista de listas		OK
-Se entrega proyecto de combos			OK
-Se entrega proyecto de PreExamen		OK falta terminar.
+Se entrega proyecto de lista de listas      OK
+Se entrega proyecto de combos           OK
+Se entrega proyecto de PreExamen        OK falta terminar.
 -----------------------------------------------------------------------
 Fecha: 27 de septiembre de 2017
 
-Se entrega proyecto Preexamen2.1 corregido		OK
-Se entrega proyecto Grafo_Adhoc				OK
+Se entrega proyecto Preexamen2.1 corregido      OK
+Se entrega proyecto Grafo_Adhoc             OK
 
 Rev.
-	Solo detalles.		OK
+    Solo detalles.      OK
 --------------------------------------------------------------------------------
 2 de octubre de 2017
-	Examen 2. Editor de Texto.
+    Examen 2. Editor de Texto.
 Rev.
-	Se define un área dentro del área cliente, cuando se llena deve 
-	limpiarse y regresar el cursor al inicio.
-	Se compila estaticamente ligado y con la opción release.
+    Se define un área dentro del área cliente, cuando se llena deve 
+    limpiarse y regresar el cursor al inicio.
+    Se compila estaticamente ligado y con la opción release.
 --------------------------------------------------------------------------------
 3 de octubre de 2017
 
-Se entrega Examen 2 Editor de texto corregido
-		
+Se entrega Examen 2 Editor de texto corregido       OK
+--------------------------------------------------------------------------------
+9 de octubre de 2017
 
+Se entrega Controles Comunes            Se debe iniciar con los Progress1 , 2 en 100%
+Se entrega Lista_combo              No corre el .exe hay compilar de nuevo.
+--------------------------------------------------------------------------------
+17 de octubre de 2017
+
+Se entrega Controles comunes    Verificar el Spin!!!
+Se entrega Diálogos comunes     OK
+--------------------------------------------------------------------------------
+23 de octubre de 2017
+
+Se entrega impresion en el area cliente del grafo optimo aleatorio.     OK
+Rev.
+    Agregar el Destructor.
+Rev.
+    Siga participando.
+--------------------------------------------------------------------------------
+31 de octubre de 2017
+
+Se entrega destructor grafo optimo aleatorio. Recompilar
+Se entrega controles ActiveX        OK
+
+--------------------------------------------------------------------------------
+8 de noviembre de 2017
+
+Se entrega grafo optimo aleatorio	Faltan NULLs en le ListCtrl
+Se entrega grafo serializacion		Aún NO!!!
+Desp vertical				OK
+
+--------------------------------------------------------------------------------
+23 de noviembre de 2017
+
+Se entrega conjuntos
+Se entrega BD1
+Se entrega BD2
+Se entrega BD3
+Se entrega BD4
+Se entrega shorcut

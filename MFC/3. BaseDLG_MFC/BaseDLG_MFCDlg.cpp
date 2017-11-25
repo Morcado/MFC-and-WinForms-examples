@@ -179,7 +179,7 @@ void CBaseDLG_MFCDlg::OnAccion()
     static int i = 0;
     char cad[3];
     SetDlgItemText(IDC_EDIT1, "Mundo Hola");
-    m_Combo.AddString(itoa(i++, cad, 3));
+    m_Combo.AddString("Hola Mundo");
 	// TODO: Add your control notification handler code here
 	
 }

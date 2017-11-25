@@ -1,0 +1,525 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Mexican) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESM)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MEXICAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 10, 3\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Ole_BD.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.esp\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.esp\\afxdb.rc""           // Database resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Spanish (Mexican) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Spanish (Modern) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+#ifdef _WIN32
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH_MODERN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Ole_BD.ico"
+IDR_OLE_BDTYPE          ICON    DISCARDABLE     "res\\Ole_BDDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_RECORD_FIRST
+    BUTTON      ID_RECORD_PREV
+    BUTTON      ID_RECORD_NEXT
+    BUTTON      ID_RECORD_LAST
+    SEPARATOR
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Archivo"
+    BEGIN
+        MENUITEM "&Nuevo\tCtrl+N",              ID_FILE_NEW
+        MENUITEM "&Abrir...\tCtrl+A",           ID_FILE_OPEN
+        MENUITEM "&Guardar\tCtrl+G",            ID_FILE_SAVE
+        MENUITEM "Guardar c&omo...",            ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Archivo reciente",            ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Salir",                      ID_APP_EXIT
+    END
+    POPUP "&Editar"
+    BEGIN
+        MENUITEM "&Deshacer\tCtrl+Z",           ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cor&tar\tCtrl+X",             ID_EDIT_CUT
+        MENUITEM "&Copiar\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "&Pegar\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&Registro"
+    BEGIN
+        MENUITEM "&Primer registro",            ID_RECORD_FIRST
+        MENUITEM "Registro &anterior",          ID_RECORD_PREV
+        MENUITEM "&Siguiente registro",         ID_RECORD_NEXT
+        MENUITEM "&Último registro",            ID_RECORD_LAST
+    END
+    POPUP "&Ver"
+    BEGIN
+        MENUITEM "Barra de &herramientas",      ID_VIEW_TOOLBAR
+        MENUITEM "Barra de &estado",            ID_VIEW_STATUS_BAR
+    END
+    POPUP "Ay&uda"
+    BEGIN
+        MENUITEM "&Acerca de Ole_BD...",        ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Acerca de Ole_BD"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Ole_BD Versión 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "Aceptar",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_OLE_BD_FORM DIALOG DISCARDABLE  0, 0, 320, 200
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_ADODC1,"{67397AA3-7FB1-11D0-B148-00A0C922E820}",
+                    0x0,13,12,293,31
+    CONTROL         "",IDC_DATAGRID1,"{CDE57A43-8B86-11D0-B3C6-00A0C90AEA82}",
+                    WS_TABSTOP,13,49,294,137
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "0C0A04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Aplicación MFC Ole_BD\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Ole_BD\0"
+            VALUE "LegalCopyright", "Copyright (C) 2017\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Ole_BD.EXE\0"
+            VALUE "ProductName", "Aplicación Ole_BD\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0xc0a, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_OLE_BD_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OLE_BD_FORM DLGINIT
+BEGIN
+    IDC_ADODC1, 0x376, 868, 0
+0x0024, 0x0000, 0x0043, 0x0034, 0x0031, 0x0034, 0x0035, 0x0033, 0x0031, 
+0x0030, 0x002d, 0x0034, 0x0036, 0x0039, 0x0043, 0x002d, 0x0031, 0x0031, 
+0x0064, 0x0031, 0x002d, 0x0042, 0x0031, 0x0038, 0x0032, 0x002d, 0x0030, 
+0x0030, 0x0041, 0x0030, 0x0043, 0x0039, 0x0032, 0x0032, 0x0045, 0x0038, 
+0x0032, 0x0030, 0x4321, 0x1234, 0x0008, 0x0000, 0x2d7a, 0x0000, 0x052b, 
+0x0000, 0x6bc0, 0xba38, 0x0000, 0x0006, 0x0000, 0x0000, 0x0003, 0x0000, 
+0xffff, 0xffff, 0x000f, 0x0000, 0x001e, 0x0000, 0x0003, 0x0000, 0x0003, 
+0x0000, 0x0008, 0x0000, 0x0000, 0x0000, 0x0032, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0005, 
+0x8000, 0x0008, 0x8000, 0x0000, 0x0000, 0xffff, 0x0000, 0x008d, 0x0000, 
+0x0050, 0x0072, 0x006f, 0x0076, 0x0069, 0x0064, 0x0065, 0x0072, 0x003d, 
+0x004d, 0x0069, 0x0063, 0x0072, 0x006f, 0x0073, 0x006f, 0x0066, 0x0074, 
+0x002e, 0x004a, 0x0065, 0x0074, 0x002e, 0x004f, 0x004c, 0x0045, 0x0044, 
+0x0042, 0x002e, 0x0034, 0x002e, 0x0030, 0x003b, 0x0044, 0x0061, 0x0074, 
+0x0061, 0x0020, 0x0053, 0x006f, 0x0075, 0x0072, 0x0063, 0x0065, 0x003d, 
+0x0043, 0x003a, 0x005c, 0x0055, 0x0073, 0x0065, 0x0072, 0x0073, 0x005c, 
+0x004f, 0x0073, 0x0063, 0x0061, 0x0072, 0x0020, 0x0050, 0x0061, 0x0074, 
+0x0069, 0x00f1, 0x006f, 0x005c, 0x0044, 0x0065, 0x0073, 0x006b, 0x0074, 
+0x006f, 0x0070, 0x005c, 0x0056, 0x0069, 0x0073, 0x0075, 0x0061, 0x006c, 
+0x0020, 0x0032, 0x0030, 0x0031, 0x0037, 0x005c, 0x004d, 0x0046, 0x0043, 
+0x005c, 0x004f, 0x006c, 0x0065, 0x005f, 0x0042, 0x0044, 0x005c, 0x0065, 
+0x0073, 0x0074, 0x0075, 0x0064, 0x0069, 0x0061, 0x006e, 0x0074, 0x0065, 
+0x0073, 0x002e, 0x006d, 0x0064, 0x0062, 0x003b, 0x0050, 0x0065, 0x0072, 
+0x0073, 0x0069, 0x0073, 0x0074, 0x0020, 0x0053, 0x0065, 0x0063, 0x0075, 
+0x0072, 0x0069, 0x0074, 0x0079, 0x0020, 0x0049, 0x006e, 0x0066, 0x006f, 
+0x003d, 0x0046, 0x0061, 0x006c, 0x0073, 0x0065, 0x008d, 0x0000, 0x0050, 
+0x0072, 0x006f, 0x0076, 0x0069, 0x0064, 0x0065, 0x0072, 0x003d, 0x004d, 
+0x0069, 0x0063, 0x0072, 0x006f, 0x0073, 0x006f, 0x0066, 0x0074, 0x002e, 
+0x004a, 0x0065, 0x0074, 0x002e, 0x004f, 0x004c, 0x0045, 0x0044, 0x0042, 
+0x002e, 0x0034, 0x002e, 0x0030, 0x003b, 0x0044, 0x0061, 0x0074, 0x0061, 
+0x0020, 0x0053, 0x006f, 0x0075, 0x0072, 0x0063, 0x0065, 0x003d, 0x0043, 
+0x003a, 0x005c, 0x0055, 0x0073, 0x0065, 0x0072, 0x0073, 0x005c, 0x004f, 
+0x0073, 0x0063, 0x0061, 0x0072, 0x0020, 0x0050, 0x0061, 0x0074, 0x0069, 
+0x00f1, 0x006f, 0x005c, 0x0044, 0x0065, 0x0073, 0x006b, 0x0074, 0x006f, 
+0x0070, 0x005c, 0x0056, 0x0069, 0x0073, 0x0075, 0x0061, 0x006c, 0x0020, 
+0x0032, 0x0030, 0x0031, 0x0037, 0x005c, 0x004d, 0x0046, 0x0043, 0x005c, 
+0x004f, 0x006c, 0x0065, 0x005f, 0x0042, 0x0044, 0x005c, 0x0065, 0x0073, 
+0x0074, 0x0075, 0x0064, 0x0069, 0x0061, 0x006e, 0x0074, 0x0065, 0x0073, 
+0x002e, 0x006d, 0x0064, 0x0062, 0x003b, 0x0050, 0x0065, 0x0072, 0x0073, 
+0x0069, 0x0073, 0x0074, 0x0020, 0x0053, 0x0065, 0x0063, 0x0075, 0x0072, 
+0x0069, 0x0074, 0x0079, 0x0020, 0x0049, 0x006e, 0x0066, 0x006f, 0x003d, 
+0x0046, 0x0061, 0x006c, 0x0073, 0x0065, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x001c, 0x0000, 0x0053, 
+0x0045, 0x004c, 0x0045, 0x0043, 0x0054, 0x0020, 0x002a, 0x0020, 0x0046, 
+0x0052, 0x004f, 0x004d, 0x0020, 0x0043, 0x0061, 0x006c, 0x0069, 0x0066, 
+0x0069, 0x0063, 0x0061, 0x0063, 0x0069, 0x006f, 0x006e, 0x0065, 0x0073, 
+0x0006, 0x0000, 0x0041, 0x0064, 0x006f, 0x0064, 0x0063, 0x0031, 0x0001, 
+0x0000, 0x0190, 0x4244, 0x0001, 0x4d0d, 0x2053, 0x6153, 0x736e, 0x5320, 
+0x7265, 0x6669, 
+    IDC_DATAGRID1, 0x37a, 516, 0
+0x0024, 0x0000, 0x0043, 0x0044, 0x0045, 0x0035, 0x0037, 0x0041, 0x0035, 
+0x0035, 0x002d, 0x0038, 0x0042, 0x0038, 0x0036, 0x002d, 0x0031, 0x0031, 
+0x0044, 0x0030, 0x002d, 0x0062, 0x0033, 0x0043, 0x0036, 0x002d, 0x0030, 
+0x0030, 0x0041, 0x0030, 0x0043, 0x0039, 0x0030, 0x0041, 0x0045, 0x0041, 
+0x0038, 0x0032, 0x0012, 0x0000, 0x0001, 0x0000, 0x000a, 0x0000, 0x002a, 
+0x0000, 0x03e8, 0x4321, 0x1234, 0x0008, 0x0000, 0x2d94, 0x0000, 0x170c, 
+0x0000, 0xe860, 0x5ad5, 0x0000, 0x0006, 0x0001, 0x0000, 0x0002, 0x0000, 
+0x0005, 0x8000, 0x0008, 0x8000, 0x0000, 0x3f80, 0x0000, 0x4180, 0x0000, 
+0x0000, 0x0101, 0x0002, 0x0001, 0x0101, 0xff01, 0x01ff, 0x0000, 0x00ff, 
+0x5203, 0x0be3, 0x8f91, 0x11ce, 0xe39d, 0xaa00, 0x4b00, 0x51b8, 0x0001, 
+0x0000, 0x0190, 0x4244, 0x0001, 0x4d0d, 0x2053, 0x6153, 0x736e, 0x5320, 
+0x7265, 0x6669, 0x5203, 0x0be3, 0x8f91, 0x11ce, 0xe39d, 0xaa00, 0x4b00, 
+0x51b8, 0x0001, 0x0000, 0x0190, 0x4244, 0x0001, 0x4d0d, 0x2053, 0x6153, 
+0x736e, 0x5320, 0x7265, 0x6669, 0x0000, 0x0000, 0x0012, 0x0000, 0x0044, 
+0x0061, 0x0074, 0x0061, 0x0047, 0x0072, 0x0069, 0x0064, 0x0031, 0x0006, 
+0x0000, 0x0004, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 
+0x0001, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x5690, 0x6d83, 0x900b, 0x11d0, 
+0x8494, 0xa000, 0x11c9, 0xed10, 0x3850, 0x6b26, 0x0002, 0x0006, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0057, 0x0069, 0x007a, 0x0061, 0x0072, 0x0064, 0x080a, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x5690, 0x6d83, 0x900b, 0x11d0, 
+0x8494, 0xa000, 0x11c9, 0xed10, 0x3850, 0x6b26, 0x0002, 0x0006, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0073, 0x005c, 0x0050, 0x0044, 0x0057, 0x0069, 0x080a, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x428e, 0x0000, 
+0x0000, 0x0002, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x428e, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_FAILED_OPEN_DATABASE "No se puede abrir la base de datos."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Ole_BD\n\nOle_BD\n\n\nOleBD.Document\nOle_BD Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Ole_BD"
+    AFX_IDS_IDLEMESSAGE     "Preparado"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "MAY"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "DESP"
+    ID_INDICATOR_OVR        "SOB"
+    ID_INDICATOR_REC        "GRB"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Crea un nuevo documento\nNuevo"
+    ID_FILE_OPEN            "Abre un documento ya existente\nAbrir"
+    ID_FILE_CLOSE           "Cierra el documento activo\nCerrar"
+    ID_FILE_SAVE            "Guarda el documento activo\nGuardar"
+    ID_FILE_SAVE_AS         "Guarda el documento activo con un nuevo nombre\nGuardar como"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Muestra información del programa, número de versión y copyright\nAcerca de"
+    ID_APP_EXIT             "Sale de la aplicación; le pide que guarde los documentos\nSalir"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Abre este documento"
+    ID_FILE_MRU_FILE2       "Abre este documento"
+    ID_FILE_MRU_FILE3       "Abre este documento"
+    ID_FILE_MRU_FILE4       "Abre este documento"
+    ID_FILE_MRU_FILE5       "Abre este documento"
+    ID_FILE_MRU_FILE6       "Abre este documento"
+    ID_FILE_MRU_FILE7       "Abre este documento"
+    ID_FILE_MRU_FILE8       "Abre este documento"
+    ID_FILE_MRU_FILE9       "Abre este documento"
+    ID_FILE_MRU_FILE10      "Abre este documento"
+    ID_FILE_MRU_FILE11      "Abre este documento"
+    ID_FILE_MRU_FILE12      "Abre este documento"
+    ID_FILE_MRU_FILE13      "Abre este documento"
+    ID_FILE_MRU_FILE14      "Abre este documento"
+    ID_FILE_MRU_FILE15      "Abre este documento"
+    ID_FILE_MRU_FILE16      "Abre este documento"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Cambia a la siguiente sección de ventana\nSiguiente sección"
+    ID_PREV_PANE            "Vuelve a la sección de ventana anterior\nSección anterior"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Divide la ventana activa en secciones\nDividir"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Borra la selección\nBorrar"
+    ID_EDIT_CLEAR_ALL       "Borra todo\nBorrar todo"
+    ID_EDIT_COPY            "Copia la selección y la coloca en el portapapeles\nCopiar"
+    ID_EDIT_CUT             "Corta la selección y la coloca en el portapapeles\nCortar"
+    ID_EDIT_FIND            "Buscaa el texto especificado\nBuscar"
+    ID_EDIT_PASTE           "Inserta el contenido del portapapeles\nPegar"
+    ID_EDIT_REPEAT          "Repite la última acción\nRepetir"
+    ID_EDIT_REPLACE         "Reemplaza texto específico por otro texto\nReemplazar"
+    ID_EDIT_SELECT_ALL      "Selecciona todo el documento\nSeleccionar todo"
+    ID_EDIT_UNDO            "Deshace la última acción\nDeshacer"
+    ID_EDIT_REDO            "Rehace la acción que acaba de deshacerse\nRehacer"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Muestra u oculta la barra de herramientas\nAlternar Barra de herramientas"
+    ID_VIEW_STATUS_BAR      "Muestra u oculta la barra de estado\nAlternar Barra de estado"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_RECORD_FIRST         "Retrocede al primer registro\nPrimer registro"
+    ID_RECORD_LAST          "Avanza al último registro\nÚltimo registro"
+    ID_RECORD_NEXT          "Avanza al siguiente registro\nSiguiente registro"
+    ID_RECORD_PREV          "Retrocede al registro anterior\nRegistro anterior"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Cambia el tamaño de la ventana"
+    AFX_IDS_SCMOVE          "Cambia la posición de la ventana"
+    AFX_IDS_SCMINIMIZE      "Reduce la ventana a un icono"
+    AFX_IDS_SCMAXIMIZE      "Agranda la ventana al tamaño completo"
+    AFX_IDS_SCNEXTWINDOW    "Cambia a la ventana del siguiente documento"
+    AFX_IDS_SCPREVWINDOW    "Cambia a la ventana del documento anterior"
+    AFX_IDS_SCCLOSE         "Cierra la ventana activa y le pide que guarde los documentos"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restaura la ventana a su tamaño normal"
+    AFX_IDS_SCTASKLIST      "Activa la lista de tareas"
+END
+
+#endif    // Spanish (Modern) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESP)
+#ifdef _WIN32
+LANGUAGE 10, 3
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Ole_BD.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.esp\afxres.rc"          // Standard components
+#include "l.esp\afxdb.rc"           // Database resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
